@@ -24,3 +24,8 @@ ainda variáveis, consegui realizar a primeira sentença em php
     echo ' anos';
 
 
+## Quarta aula
+definindo constantes*
+sintax de arrays*
+sintax de condições*
+sintax de laços e loops*
