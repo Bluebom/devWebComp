@@ -15,17 +15,29 @@ variáveis de ambiente:
 
 ## Terceira aula
 ainda variáveis, consegui realizar a primeira sentença em php 
-:   $nome = 'Franklin';
-    $idade = '21';
-    echo 'Olá meu nome é ';
-    echo $nome;
-    echo ' e eu tenho ';
-    echo $idade;
-    echo ' anos';
+:   
++ $nome = 'Franklin';
++ $idade = '21';
++ echo 'Olá meu nome é ';
++ echo $nome;
++ echo ' e eu tenho ';
++ echo $idade;
++ echo ' anos';
 
 
 ## Quarta aula
-definindo constantes*
-sintax de arrays*
-sintax de condições*
-sintax de laços e loops*
++ definindo constantes*
++ sintax de arrays*
++ sintax de condições*
++ sintax de laços e loops*
+
+## Quinta aula
++ foreach and for with arrays
++ arrays multidimensionais
++ sleep and die functions
++ como criar funções próprias
++ function date and function include with a great idea
++ String functions
++ Switch, break e continue 
++ methods GET and POST for forms
+
