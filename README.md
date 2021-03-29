@@ -41,3 +41,8 @@ ainda variáveis, consegui realizar a primeira sentença em php
 + Switch, break e continue 
 + methods GET and POST for forms
 
+## Sexta aula
++ Sessions and Cookies
++ Static, public and private
++ Final class, extends, inherit, parent:: and protected
++ Magic method __contruct
