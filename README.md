@@ -46,3 +46,9 @@ ainda variáveis, consegui realizar a primeira sentença em php
 + Static, public and private
 + Final class, extends, inherit, parent:: and protected
 + Magic method __contruct
+
+## Sétima aula
++ keywords: namespace and use
++ spl_autoload_register
++ constantes em PHPOO
++ design paterns
