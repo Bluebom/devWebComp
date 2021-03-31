@@ -52,3 +52,9 @@ ainda variáveis, consegui realizar a primeira sentença em php
 + spl_autoload_register
 + constantes em PHPOO
 + design paterns
+
+## Oitava aula
++ mysql
++ PDO class
++ INSERT INTO, UPDATE, DELETE, WHERE, AND, OR
++ INNER JOIN, ON, GROUP BY, LIMIT, ORDER BY, ASC, DESC
