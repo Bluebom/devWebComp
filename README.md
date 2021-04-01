@@ -58,3 +58,12 @@ ainda variáveis, consegui realizar a primeira sentença em php
 + PDO class
 + INSERT INTO, UPDATE, DELETE, WHERE, AND, OR
 + INNER JOIN, ON, GROUP BY, LIMIT, ORDER BY, ASC, DESC
+
+## Nona aula
++ differences of INNER JOIN, LEFT JOIN and RIGHT JOIN
++ using try and catch
++ using LIKE
++ learning BETWEEN and IN
++ GROUP BY with HAVING
++ Subqueries
+### Projeto1
