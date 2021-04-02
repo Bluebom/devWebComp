@@ -1,14 +1,15 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap&family=Raleway:wght@600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 /* variáveis css */
 :root{
-    --color01: #3D3D3D;
-    --color02: #3C3C3C;
-    --color03: #2B2B2B;
+    --color3D: #3D3D3D;
+    --color3C: #3C3C3C;
+    --color2B: #2B2B2B;
     --font01: 'Roboto', sans-serif;
     --font02: 'Open Sans', sans-serif;
+    --font03: 'Raleway', sans-serif;
 }
 
 /* conf. geral */
@@ -20,16 +21,182 @@
     text-decoration: none;
 }
 
-.header-mobile > .mobile, .header-mobile > .menu_hamburguer{
-    display: none;
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
+/* style */
+section.header-mobile{
+    display: none;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color3C);
+}
+
+.center{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
+section.all_vh{
+    width: 100%;
+    height: 100vh;
+}
+section#Home .bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(61,61,61,.55), rgba(61,61,61,.55)), url('../image/eagle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}    
+
+section#Home h1{
+    color: white;
+    font-weight: 400;
+}
+
+section#Home h1 span{
+    color: #FFF200;
+    font-family: var(--font03);
+    font-weight: 600;
+}
+section#Home h2{
+    color: white;
+    font-weight: 400;
+}
+
+
+section#Home .see_jobs{
+    display: inline;
+    margin: 1rem;
+    padding: .4rem .8rem;
+    width: 6,25rem;
+    border: .1rem solid white;
+    cursor: pointer;
+    transition: 1s;
+}
+
+section#Home .see_jobs:hover{
+    background-color: rgba(61,61,61,.55);
+}
+
+section#Home .see_jobs p{
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+section#Home .see_jobs p i{
+    padding: 0 0 0 .5rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.title h1::after{
+    display: block;
+    width: 100%;
+    margin-top: .3rem;
+    font-size: .1rem;
+    content: '_';
+    color: rgba(0, 0, 0, 1);
+    background-color: #000;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5.2rem;
+    background-color: var(--color2B);
+}
+
+footer .form_social{
+    display: flex;
+    margin: .4rem auto;
+    justify-content: space-between;
+}
+
+footer .form_social span{
+    margin: 0rem 1rem;
+    background-color: var(--color3C);
+    cursor: pointer;
+    box-shadow: 0rem .3rem 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+footer .form_social span i{
+    font-size: 1.2rem;
+    color: white;
+    padding: .4rem .4rem;
+
+}
+
+footer .copyright p{
+    color: white;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 300;
+}
+
+footer .copyright p span{
+    color: #FFF200;
+}
+
+
+/* sem menu hamburguer */
 @media (max-width: 768px){
-    .header-mobile > .e{
-        display: inline;
+
+
+}
+
+/* com menu hamburguer */
+@media (max-width: 570px){
+    section.header-desktop{
+        display:none;
     }
-    .header-desktop >.desktop{
+    section.header-mobile{
+        display: block;
+    }
+
+    span.e{
+        color: white;
+        font-size: 2.5rem;
+        display: block;
+        text-align: right;
+        padding-right: 1rem;
+        cursor: pointer;
+    }
+
+    span.x,
+    header.mobile{
         display: none;
     }
-   
+
+    section#Home h1{
+        font-size: 1.3rem;
+    }
+    
+    section#Home h2{
+        font-size: 1.2rem;
+    }
+
 }
