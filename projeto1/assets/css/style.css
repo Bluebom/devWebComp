@@ -27,16 +27,10 @@ html, body{
 }
 
 /* style */
-section.header-mobile{
-    display: none;
-    width: 100%;
-    height: 3rem;
-    background-color: var(--color3C);
-}
 
-.center{
+div.center{
     width: 100%;
-    max-width: 1440px;
+    max-width: 90rem;
     height: 100%;
 }
 
@@ -44,6 +38,92 @@ section.all_vh{
     width: 100%;
     height: 100vh;
 }
+
+.title{
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    color: var(--color2B);
+}
+
+.title h1::after{
+    display: block;
+    width: 100%;
+    font-size: .1rem;
+    content: '_';
+    color: rgba(0, 0, 0, 1);
+    background-color: var(--color2B);
+}
+
+/* Header */
+section.header-mobile{
+    display: none;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color2B);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+section.header-desktop{
+    display: block;
+    width: 100%;
+    background-color: var(--color2B);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+section.header-desktop .w100 {
+    width: 100%;
+}
+
+section.header-desktop .desktop {
+    height: 1rem;
+}
+
+section.header-desktop .desktop nav{
+    width: 100%;
+    height: 100%;
+}
+
+section.header-desktop .desktop ul {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+section.header-desktop .desktop ul li{
+    list-style-type: none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+section.header-desktop .desktop ul li a{
+    color: white;
+    cursor: pointer;
+}
+
+section.header-desktop .desktop ul li a:hover{
+    text-decoration: underline .01rem solid #FFF200;
+}
+
+section.header-desktop .desktop ul li a.marked{
+    color: #FFF200;
+}
+
+/* Home */
 section#Home .bg{
     display: flex;
     flex-direction: column;
@@ -54,9 +134,11 @@ section#Home .bg{
     background-image: linear-gradient(to bottom, rgba(61,61,61,.55), rgba(61,61,61,.55)), url('../image/eagle.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }    
 
 section#Home h1{
+    font-size: 2rem;
     color: white;
     font-weight: 400;
 }
@@ -67,6 +149,7 @@ section#Home h1 span{
     font-weight: 600;
 }
 section#Home h2{
+    font-size: 1.8rem;
     color: white;
     font-weight: 400;
 }
@@ -89,32 +172,194 @@ section#Home .see_jobs:hover{
 section#Home .see_jobs p{
     color: white;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 section#Home .see_jobs p i{
     padding: 0 0 0 .5rem;
 }
 
-.title{
+
+/* About */
+div.center section#About{
+    height: 64rem;
+    background-color: rgba(170, 170, 170, 0.1);
+    border: .1rem solid var(--color2B);
+}
+
+section#About .form_hexx {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form_hexx div.w33{
+    width: 33%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+    justify-content: space-around;
 }
 
-.title h1::after{
+.form_hexx div.hex_about_1{
     display: block;
-    width: 100%;
-    margin-top: .3rem;
-    font-size: .1rem;
-    content: '_';
-    color: rgba(0, 0, 0, 1);
-    background-color: #000;
+    width: 6rem;
+    padding: 2.5rem;
+    background-image: url('../image/hexagon\ 1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
+.form_hexx div.hex_about_2{
+    display: block;
+    width: 6rem;
+    padding: 2.5rem;
+    background-image: url('../image/hexagon\ 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
+.form_hexx div.hex_about_3{
+    display: block;
+    width: 6rem;
+    padding: 2.5rem;
+    background-image: url('../image/hexagon\ 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.form_hexx .w33 h3{
+    font-weight: 500;
+    color: var(--color2B);
+}
+
+.form_hexx .w33 p{
+    width: 90%;
+    margin-top: .3rem;
+    max-width: 19rem;
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+section.who_i_am{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.who_i_am  div.w50{
+    width: 50%;
+}
+
+section.who_i_am .description{
+    text-align: center;
+    padding: 0 .5rem;
+} 
+
+section.who_i_am .description h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    color:var(--color3C);
+    padding: .8rem 0;
+}
+
+section.who_i_am .description p{
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+section.who_i_am .description h3{
+    padding-top: .3rem;
+    font-size: 1.4rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+section.who_i_am .description h3 a{
+    color: var(--color2B);
+    cursor: pointer;
+}
+
+section.who_i_am .description h3 a:hover{
+    text-decoration: underline .1rem var(--color2B);
+}
+
+section.who_i_am  img{
+    width: 72%;
+
+}
+
+div.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+div.skills h2{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color2B);
+}
+
+.skillBox{
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.skillBox span{
+    width: 6rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 1rem;
+    background-color: #219653;
+    box-shadow: 0 .2rem 3px -5px #219653, 0 .12rem 5px #219653;
+    font-family: var(--font02);
+    font-weight: 600;
+    text-align: left;
+    text-indent: .5rem;
+    line-height: 1.8rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.skillBox .skill{
+    margin-top: 1rem;
+    width: 100%;
+    height: 1.8rem;
+    background-color: rgba(196, 196, 196, 0.45);
+
+}
+
+.skillBox .skill .skill_lv{
+    height: 1.8rem;
+    background: linear-gradient(to left, #6FCF97, #6FCF97);
+    transition: 2s ease;
+    box-shadow: 0 .2rem 3px -5px #6FCF97, 0 .12rem 5px #6FCF97;
+    width: 0;
+    opacity: 0;
+
+}
+
+/* Footer */
 footer{
     display: flex;
     flex-direction: column;
@@ -162,14 +407,78 @@ footer .copyright p span{
 }
 
 
-/* sem menu hamburguer */
-@media (max-width: 768px){
 
+
+/* sem menu hamburguer */
+@media (max-width: 1148px){
+    section.who_i_am  img{
+        width: 90%;
+    }
+    section.header-desktop .desktop ul {
+        width: 60%;
+    }
+
+}
+@media (max-width: 768px){
+    section.header-desktop .desktop ul {
+        width: 70%;
+    }
+    div.center section#About{
+        height: 108rem;
+    }
+
+    section#About .form_hexx {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .form_hexx div.w33{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    section.who_i_am{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    section.who_i_am div.w50{
+        width: 100%;
+    }
+
+    section.who_i_am  img{
+        width: 50%;
+    }
+    .skillBox{
+        margin-top: .5rem;
+    }
+    
+    .skillBox span{
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    .skillBox .skill{
+        margin-top: 1rem;
+        height: 1.5rem;
+    
+    }
+    
+    .skillBox .skill .skill_lv{
+        height: 1.5rem;
+    
+    }
 
 }
 
 /* com menu hamburguer */
+
 @media (max-width: 570px){
+    div.center section#About{
+        height: 104rem;
+    }
+
     section.header-desktop{
         display:none;
     }
@@ -192,11 +501,18 @@ footer .copyright p span{
     }
 
     section#Home h1{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     section#Home h2{
         font-size: 1.2rem;
     }
+    section#Home .see_jobs p{
+        font-size: .8rem;
+    }
 
+    section.who_i_am .description{
+        text-align: center;
+        padding: 0 1.4rem;
+    }
 }
