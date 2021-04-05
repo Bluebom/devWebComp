@@ -68,3 +68,17 @@ document.addEventListener('click', (e) =>{
         }
     })
 })
+
+// document.addEventListener('scroll', () => {
+//     const offset = window.pageYOffset;
+
+//     console.log(offset);
+// })
+
+/*
+0
+694
+2358
+3052
+3746
+*/
