@@ -50,12 +50,16 @@ section.all_vh{
 }
 
 .title h1::after{
+    margin-top: .3rem;
+    margin-left: 12.5%;
+    text-align: center;
     display: block;
-    width: 100%;
-    font-size: .1rem;
+    width: 75%;
+    font-size: .01rem;
     content: '_';
-    color: rgba(0, 0, 0, 1);
-    background-color: var(--color2B);
+    border-top: .2rem solid var(--color2B);
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Header */
@@ -324,14 +328,16 @@ section.who_i_am .description h3{
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
+    
 }
 
 section.who_i_am .description h3 a{
     color: var(--color2B);
     cursor: pointer;
+    text-shadow: -.2rem .2rem 1px #FFF200;
 }
 
-section.who_i_am .description h3 a:hover{
+section.who_i_am .description h3:hover{
     text-decoration: underline .1rem var(--color2B);
 }
 
@@ -452,10 +458,167 @@ section.flex_rect .w25 p{
     width: 100%;
     padding: .3rem;
     font-size: 1.5rem;
-    background-color: var(--color3C);
+    background-color: var(--color2B);
     color: white;
     border: .1rem solid var(--color2B);
 
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: var(--color3D);
+}
+
+/* Portfolio */
+
+section#Portfolio{
+    margin-top: 3rem;
+    height: 60rem;
+    width: 100%;
+    position: relative;
+    background-color: #2B2B2B;
+    overflow: hidden;
+
+}
+
+section#Portfolio div.down_triangle{
+    width: 0;
+    height: 0;
+    border-right: 44rem solid transparent;
+    border-left: 44rem solid transparent;
+    border-top: 15rem solid #FFF;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+section#Portfolio div.portfolio_carousel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 12rem;
+}
+
+section#Portfolio div.portfolio_carousel h1{
+    color: white;
+}
+
+section#Portfolio div.portfolio_carousel .title h1::after{
+    background-color: rgba(0, 0, 0, 0);
+    border-top: .2rem solid #fff;
+}
+
+
+.carousel_JS{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.carousel{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    max-height: 38rem;
+    margin: 0 auto;
+}
+
+.carousel_track-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel_track{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.carousel_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.is_hidden{
+    display: none;
+}
+
+#left-triangle{
+    margin-right: .5rem;
+    width: 0;
+    height: 0;
+    border-bottom: 1.5rem solid transparent;
+    border-top: 1.5rem solid transparent;
+    border-right: 1.5rem solid #FFF;
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    right: 100%;
+}
+
+#right-triangle{
+    margin-left: .5rem;
+    width: 0;
+    height: 0;
+    border-bottom: 1.5rem solid transparent;
+    border-top: 1.5rem solid transparent;
+    border-left: 1.5rem solid #FFF;
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    left: 100%;
+}
+
+.carousel_nav{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: .1rem 1rem;
+}
+
+.carousel_indicator{
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 1rem;
+    border: .1rem solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0 .8rem;
+    cursor: pointer;
+}
+
+.carousel_indicator.current_slide{
+    background-color: var(--color2B);
+}
+
+@media (max-width: 800px){
+    /* .carousel{
+        position: relative;
+        width: 70%;
+        height: 35rem;
+        margin: 0 auto;
+    } */
+    
 }
 
 /* Footer */
@@ -526,16 +689,19 @@ footer .copyright p span{
         width: 70%;
     }
     div.center section#About{
-        height: 110rem;
+        height: 111rem;
     }
 
     section#About .form_hexx {
+        margin-top: -2rem;
+        height: 100%;
+        max-height: 38rem;
         flex-direction: column;
         gap: 2rem;
     }
     .form_hexx div.w33{
         width: 100%;
-        padding: 0 1rem;
+        padding: 0rem 1rem;
     }
     
     section#About .form_hexx div.w33 > div{
@@ -585,7 +751,8 @@ footer .copyright p span{
     }
 
     section.who_i_am .skills h2{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        text-decoration: underline .2rem solid #2B2B2B;
     }
 
     .skillBox{
@@ -624,13 +791,36 @@ footer .copyright p span{
     section.flex_rect .w25 p{
     font-size: 1.2rem;
     }
+
+    section#Portfolio div.down_triangle{
+        border-right: 27rem solid transparent;
+        border-left: 27rem solid transparent;
+        border-top: 10rem solid #FFF;
+        
+    }
+
+    .carousel_JS{
+        top: 4rem;
+    }
+
+    .carousel{
+        width: 85%;
+        height: 100%;
+    }
+
+    .carousel_image{
+        margin-top: 15%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* com menu hamburguer */
 
 @media (max-width: 576px){
     div.center section#About{
-        height: 104rem;
+        height: 105rem;
     }
 
     section.header-desktop{
@@ -685,6 +875,7 @@ footer .copyright p span{
     section.who_i_am .description{
         text-align: center;
         padding: 0 1.4rem;
+        margin-bottom: .8rem;
     }
 
     section.who_i_am .description h2{
@@ -743,5 +934,39 @@ footer .copyright p span{
         padding: .3rem;
         font-size: 1.2rem;
     
+    }
+
+    div.center section#Portfolio{
+        margin-top: 28%;
+        height: 48rem;
+    }
+
+    .carousel_JS{
+        top: 7rem;
+    }
+
+    .carousel{
+        position: relative;
+        width: 80%;
+        height: 35%;
+        max-height: 32rem;
+    }
+    .carousel_image{
+        margin-top: 15%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .carousel_indicator{
+        width: 1rem;
+        height: 1rem;
+        padding: .8rem;
+        border: .1rem solid black;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        margin: 0 .8rem;
+        cursor: pointer;
     }
 }

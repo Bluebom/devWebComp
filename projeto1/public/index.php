@@ -50,7 +50,7 @@
             <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
             <h2>Sou um desenvolvedor web full-stack</h2>
             <div class="see_jobs">
-                <p>Veja o meu trabalho <i class="fas fa-arrow-right"></i></p>
+                <a href="#Portfolio">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
             </div>
             <!--see_jobs-->
         </div>
@@ -169,30 +169,29 @@
             <div class="title">
                 <h1>Serviços</h1>
             </div><!-- title -->
-            <section class="form_rect">
-                <div class="w25">
-                    <i class="fas fa-chart-pie"></i>
-                    <p>Obtenha insights sobre quem está navegando em seu site para que assim possa tomar decisões de
-                        negócio mais eficazes e inteligentes.</p>
-                    <button class="btn">Entre em contato já!</button>
-                </div><!-- w25 -->
-                <div class="w25">
-                    <i class="fas fa-chart-line"></i>
-                    <p>Procurando melhorar a performance do seu site, SEO, ou a experiência do usuário? </p>
-                    <button class="btn">Entre em contato já!</button>
-                </div><!-- w25 -->
-                <div class="w25">
-                    <i class="fas fa-pen-nib"></i>
-                    <p> Projetos modernos, otimizádos, performáticos e limpos. Eficazes na hora de converter simples
-                        visitantes em clientes!</p>
-                    <button class="btn">Entre em contato já!</button>
-                </div><!-- w25 -->
-                <div class="w25">
-                    <i class="far fa-calendar-check"></i>
-                    <p>Comprometimento em entregar os projetos no prazo correto, sem atrasos e nem aumento de valores.
-                    </p>
-                    <button class="btn">Entre em contato já!</button>
-                </div><!-- w25 -->
+            <section class="flex_rect">
+                <div class="flex_service 1">
+
+                    <div class="w25">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Procurando melhorar a performance do seu site, SEO, ou a experiência do usuário? </p>
+                        <button class="btn">Entre em contato já!</button>
+                    </div><!-- w25 -->
+                    <div class="w25">
+                        <i class="fas fa-pen-nib"></i>
+                        <p> Projetos modernos, otimizádos e performáticos. Eficazes na hora de converter simples
+                            visitantes em clientes!</p>
+                        <button class="btn">Entre em contato já!</button>
+                    </div><!-- w25 -->
+                    <div class="w25">
+                        <i class="far fa-calendar-check"></i>
+                        <p>Comprometimento em entregar os projetos no prazo correto, sem atrasos e nem aumento de valores.
+                        </p>
+                        <button class="btn">Entre em contato já!</button>
+                    </div><!-- w25 -->
+                </div>
+                <!-- form_service1 -->
+
             </section><!-- form_rect -->
         </section><!-- Services -->
         <section id="Portfolio" class="all_vh">
@@ -202,8 +201,34 @@
                     <h1>Portfólio</h1>
                 </div><!-- title -->
                 <section class="carousel_JS">
-                    <!-- Aqui vai o carrocel -->
-                </section><!-- carousel_JS -->
+                    <div class="carousel">
+                        <div id="left-triangle" class="is_hidden"></div>
+                        <!--left_triangle-->
+                        <div class="carousel_track-container">
+                            <ul class="carousel_track">
+                                <li class="carousel_slide current_slide">
+                                    <img class="carousel_image" src="../assets/image/01.jpg" alt="Um dos projetos que já criei">
+                                </li>
+                                <li class="carousel_slide">
+                                    <img class="carousel_image" src="../assets/image/02.jpg" alt="Um dos projetos que já criei">
+                                </li>
+                                <li class="carousel_slide">
+                                    <img class="carousel_image" src="../assets/image/03.jpg" alt="Um dos projetos que já criei">
+                                </li>
+                            </ul>
+                            <!--carousel_track-->
+                        </div>
+                        <!--carousel_track-container-->
+                        <div id="right-triangle"></div>
+                        <!--right_triangle-->
+                        <div class="carousel_nav">
+                            <button class="carousel_indicator current_slide"></button>
+                            <button class="carousel_indicator"></button>
+                            <button class="carousel_indicator"></button>
+                        </div>
+                        <!--carousel_nav-->
+                    </div>
+                    <!--carousel-->                </section><!-- carousel_JS -->
             </div><!-- portfolio_carousel -->
         </section><!-- Portfolio -->
         <section id="Contact" class="all_vh">
@@ -218,7 +243,7 @@
                             id="Email" required></p>
                     <p class="w100"><textarea name="msg" id="Msg" cols="30" rows="10"
                             placeholder="Deixe sua mensagem aqui!"></textarea></p>
-                    <p class="w100"><input type="submit" value="Enviar" name="acao"></p>
+                    <p class="w100"><input class="" type="submit" value="Enviar" name="acao"></p>
                 </form>
             </div><!-- form_contact -->
         </section><!-- contact -->
