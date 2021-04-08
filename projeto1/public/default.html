@@ -232,7 +232,7 @@
             </div><!-- portfolio_carousel -->
         </section><!-- Portfolio -->
         <section id="Contact" class="all_vh">
-            <div class="form_contact">
+            <div class="flex_contact">
                 <div class="title">
                     <h1>Contato</h1>
                 </div><!-- title -->
@@ -241,13 +241,13 @@
                             id="Name" required></p>
                     <p class="w100"><i class="fas fa-envelope"></i><input placeholder="Email*" type="email" name="email"
                             id="Email" required></p>
-                    <p class="w100"><textarea name="msg" id="Msg" cols="30" rows="10"
+                    <p class="w100"><textarea name="msg" id="Msg" cols="30" rows="5"
                             placeholder="Deixe sua mensagem aqui!"></textarea></p>
-                    <p class="w100"><input class="" type="submit" value="Enviar" name="acao"></p>
+                    <p class="w100"><input class="btn" type="submit" value="Enviar" name="acao"></p>
                 </form>
-            </div><!-- form_contact -->
+            </div><!-- flex_contact -->
         </section><!-- contact -->
-        <span><button><i class="fas fa-arrow-circle-up"></i></button></span>
+        <span class="fixed_button_up"><a href="#Home"><i class="far fa-arrow-alt-circle-up"></i></a></span>
         <footer>
             <div class="form_social">
                 <span><i class="fab fa-linkedin-in"></i></span>
