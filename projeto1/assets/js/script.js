@@ -4,18 +4,17 @@ const closeBtn = document.querySelector('span.x');
 const boxMobi = document.querySelector('header.mobile');
 const mobiul = document.querySelectorAll('.mobile ul li a');
 const deskul = document.querySelectorAll('.desktop ul li a');
-// span.x,
-// header.mobile
+const home = document.querySelector('#Home').offsetHeight;
+const about = document.querySelector('#About').offsetHeight;
+const services = document.querySelector('#Services').offsetHeight;
+const portfolio = document.querySelector('#Portfolio').offsetHeight;
+const contact = document.querySelector('#Contact').offsetHeight;
+const fixed_btn = document.querySelector('.fixed_button_up');
+const deskHeader = document.querySelector('.header-desktop')
+const mobiHeader = document.querySelector('.header-mobile');
 
 let mobimarked = mobiul[0];
-let dekmarked = deskul[0];
-
-setTimeout(() => {
-    progress.forEach((value, i) => {
-        value.style.width = value.getAttribute('completed') + '%';
-        value.style.opacity = '1';
-    })
-}, 1000)
+let deskmarked = deskul[0];
 
 function chMarked(previouM, nextM) {
     previouM.classList.remove("marked");
@@ -39,19 +38,22 @@ document.addEventListener('click', (e) =>{
     
     if(et == openBtn) {
         openBoxMobi(openBtn, closeBtn, boxMobi);
+        mobiHeader.style.background = '#2B2B2B';
     }
 
     if(et == closeBtn) {
         closeBoxMobi(openBtn, closeBtn, boxMobi);
+        mobiHeader.style.background = '#2B2B2B';
+        openBtn.style.color = 'white';
     }
 
     deskul.forEach((value, i) =>{
         if(et == value){
             if(et.classList.contains('marked')){
-                dekmarked = et;
+                deskmarked = et;
             }else{
-                chMarked(dekmarked, et)
-                dekmarked = et;
+                chMarked(deskmarked, et)
+                deskmarked = et;
                 closeBoxMobi(et, closeBtn, boxMobi);
             }
         }
@@ -69,11 +71,100 @@ document.addEventListener('click', (e) =>{
     })
 })
 
-// document.addEventListener('scroll', () => {
-//     const offset = window.pageYOffset;
+// scroll
+console.log(home, about, services, portfolio, contact);
 
-//     console.log(offset);
-// })
+document.addEventListener('scroll', () => {
+    const offsetY = window.pageYOffset;
+
+    if(offsetY < home){
+        chMarked(mobimarked, mobiul[0]);
+        mobimarked = mobiul[0];
+        chMarked(deskmarked, deskul[0]);
+        deskmarked = deskul[0];
+        fixed_btn.style.visibility = 'hidden';
+        mobiHeader.style.background = '#2B2B2B';
+        deskHeader.style.background = '#2B2B2B';
+        openBtn.style.color = '#FFF'
+        deskul.forEach((value,i) => {
+            value.style.color = 'white'
+            if(value.classList.contains('marked')){
+                value.style.color = '#FFF200'
+            }
+        })
+
+    }else if(offsetY < (home+about)){
+        chMarked(mobimarked, mobiul[1]);
+        mobimarked = mobiul[1];
+        chMarked(deskmarked, deskul[1]);
+        deskmarked = deskul[1];
+        fixed_btn.style.visibility = 'visible';
+        deskHeader.style.background = '#2B2B2B';
+        mobiHeader.style.background = '#2B2B2B';
+        openBtn.style.color = '#FFF'
+        deskul.forEach((value,i) => {
+            value.style.color = 'white'
+            if(value.classList.contains('marked')){
+                value.style.color = '#FFF200'
+            }
+        })
+        setTimeout(() => {
+            progress.forEach((value, i) => {
+                value.style.width = value.getAttribute('completed') + '%';
+                value.style.opacity = '1';
+            })
+        }, 1000)
+
+    }else if(offsetY < (home+about+services)){
+        chMarked(mobimarked, mobiul[2]);
+        mobimarked = mobiul[2];
+        chMarked(deskmarked, deskul[2]);
+        deskmarked = deskul[2];
+        fixed_btn.style.visibility = 'visible';
+        mobiHeader.style.background = '#2B2B2B';
+        deskHeader.style.background = '#2B2B2B';
+        openBtn.style.color = '#FFF'
+        deskul.forEach((value,i) => {
+            value.style.color = 'white'
+            if(value.classList.contains('marked')){
+                value.style.color = '#FFF200'
+            }
+        })
+    }else if(offsetY < (home+about+services+portfolio)){
+        chMarked(mobimarked, mobiul[3]);
+        mobimarked = mobiul[3];
+        chMarked(deskmarked, deskul[3]);
+        deskmarked = deskul[3];
+        fixed_btn.style.visibility = 'visible';
+        mobiHeader.style.background = 'white';
+        deskHeader.style.background = 'white';
+        deskul.forEach((value,i) => {
+            value.style.color = '#2B2B2B'
+            if(value.classList.contains('marked')){
+                value.style.color = 'black'
+            }
+        })
+        openBtn.style.color = '#2B2B2B'
+    }else{
+        chMarked(mobimarked, mobiul[4]);
+        mobimarked = mobiul[4];
+        chMarked(deskmarked, deskul[4]);
+        deskmarked = deskul[4];
+        fixed_btn.style.visibility = 'visible';
+        mobiHeader.style.background = '#2B2B2B';
+        deskHeader.style.background = '#2B2B2B';
+        openBtn.style.color = '#FFF'
+        deskul.forEach((value,i) => {
+            value.style.color = 'white'
+            if(value.classList.contains('marked')){
+                value.style.color = '#FFF200'
+            }
+        })
+
+
+    }
+
+})
 
 /*
 0
@@ -82,6 +173,8 @@ document.addEventListener('click', (e) =>{
 3052
 3746
 */
+
+
 
 // slider-carousel
 const track = document.querySelector('.carousel_track')

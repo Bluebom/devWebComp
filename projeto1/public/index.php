@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<?php include('./config.php')?>
+ <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>../assets/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +20,11 @@
         <header class="mobile w100">
             <nav>
                 <ul>
-                    <li><a href="#Home" class="marked">Home</a></li>
-                    <li><a href="#About">Sobre</a></li>
-                    <li><a href="#Services">Serviços</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#Contact">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Home" class="marked">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#About">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Services">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Portfolio">Portfolio</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Contact">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,11 +34,11 @@
         <header class="desktop w100">
             <nav>
                 <ul>
-                    <li><a href="#Home" class="marked">Home</a></li>
-                    <li><a href="#About">Sobre</a></li>
-                    <li><a href="#Services">Serviços</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#Contact">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Home" class="marked">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#About">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Services">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Portfolio">Portfolio</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH?>#Contact">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,7 +50,7 @@
             <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
             <h2>Sou um desenvolvedor web full-stack</h2>
             <div class="see_jobs">
-                <a href="#Portfolio">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
+                <a href="<?php echo INCLUDE_PATH?>#Porth1">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
             </div>
             <!--see_jobs-->
         </div>
@@ -86,12 +86,12 @@
             <!--hexx_about-->
             <section class="who_i_am" >
                 <div class="w50 description">
-                    <img src="../assets/image/hexx 1Me.png" alt="uma foto minha">
+                    <img src="<?php echo INCLUDE_PATH?>../assets/image/hexx 1Me.png" alt="uma foto minha">
                     <h2>Quem é Franklin ?</h2>
                     <p>Eu sou um desenvolvedor web full-stack jr. Tenho uma grande paixão por aprender e pelo que faço,
                         devido a isso estou sempre me atualizando com as inovações do mercado e sempre disposto a
                         adquirir novos conhecimentos.</p>
-                    <h3><a href="#Contact">Vamos fazer um website sensacional juntos!</a></h3>
+                    <h3><a href="<?php echo INCLUDE_PATH?>#Contact">Vamos fazer um website sensacional juntos!</a></h3>
                 </div>
                 <!--w50-->
                 <div class="w50 skills">
@@ -175,19 +175,19 @@
                     <div class="w25">
                         <i class="fas fa-chart-line"></i>
                         <p>Procurando melhorar a performance do seu site, SEO, ou a experiência do usuário? </p>
-                        <button class="btn">Entre em contato já!</button>
+                        <a href="<?php echo INCLUDE_PATH?>#Contact" class="btn">Entre em contato já!</a>
                     </div><!-- w25 -->
                     <div class="w25">
                         <i class="fas fa-pen-nib"></i>
                         <p> Projetos modernos, otimizádos e performáticos. Eficazes na hora de converter simples
                             visitantes em clientes!</p>
-                        <button class="btn">Entre em contato já!</button>
+                        <a href="<?php echo INCLUDE_PATH?>#Contact" class="btn">Entre em contato já!</a>
                     </div><!-- w25 -->
                     <div class="w25">
                         <i class="far fa-calendar-check"></i>
                         <p>Comprometimento em entregar os projetos no prazo correto, sem atrasos e nem aumento de valores.
                         </p>
-                        <button class="btn">Entre em contato já!</button>
+                        <a href="<?php echo INCLUDE_PATH?>#Contact" class="btn">Entre em contato já!</a>
                     </div><!-- w25 -->
                 </div>
                 <!-- form_service1 -->
@@ -196,7 +196,7 @@
         </section><!-- Services -->
         <section id="Portfolio" class="all_vh">
             <div class="down_triangle"></div>
-            <div class="portfolio_carousel">
+            <div class="portfolio_carousel" id='Porth1'>
                 <div class="title">
                     <h1>Portfólio</h1>
                 </div><!-- title -->
@@ -207,13 +207,13 @@
                         <div class="carousel_track-container">
                             <ul class="carousel_track">
                                 <li class="carousel_slide current_slide">
-                                    <img class="carousel_image" src="../assets/image/01.jpg" alt="Um dos projetos que já criei">
+                                    <img class="carousel_image" src="<?php echo INCLUDE_PATH?>../assets/image/01.jpg" alt="Um dos projetos que já criei">
                                 </li>
                                 <li class="carousel_slide">
-                                    <img class="carousel_image" src="../assets/image/02.jpg" alt="Um dos projetos que já criei">
+                                    <img class="carousel_image" src="<?php echo INCLUDE_PATH?>../assets/image/02.jpg" alt="Um dos projetos que já criei">
                                 </li>
                                 <li class="carousel_slide">
-                                    <img class="carousel_image" src="../assets/image/03.jpg" alt="Um dos projetos que já criei">
+                                    <img class="carousel_image" src="<?php echo INCLUDE_PATH?>../assets/image/03.jpg" alt="Um dos projetos que já criei">
                                 </li>
                             </ul>
                             <!--carousel_track-->
@@ -247,7 +247,7 @@
                 </form>
             </div><!-- flex_contact -->
         </section><!-- contact -->
-        <span class="fixed_button_up"><a href="#Home"><i class="far fa-arrow-alt-circle-up"></i></a></span>
+        <span class="fixed_button_up"><a href="<?php echo INCLUDE_PATH?>#Home"><i class="far fa-arrow-alt-circle-up"></i></a></span>
         <footer>
             <div class="form_social">
                 <span><i class="fab fa-linkedin-in"></i></span>
@@ -262,7 +262,7 @@
     <!-- center -->
 
 
-    <script src="../assets/js/script.js"></script>
+    <script src="<?php echo INCLUDE_PATH?>../assets/js/script.js"></script>
 </body>
 
 </html>
