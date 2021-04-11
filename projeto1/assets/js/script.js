@@ -4,17 +4,21 @@ const closeBtn = document.querySelector('span.x');
 const boxMobi = document.querySelector('header.mobile');
 const mobiul = document.querySelectorAll('.mobile ul li a');
 const deskul = document.querySelectorAll('.desktop ul li a');
-const home = document.querySelector('#Home').offsetHeight;
+const body = document.querySelector('body');
+const home = document.querySelector('#Home').offsetHeight - 30;
 const about = document.querySelector('#About').offsetHeight;
 const services = document.querySelector('#Services').offsetHeight;
 const portfolio = document.querySelector('#Portfolio').offsetHeight;
-const contact = document.querySelector('#Contact').offsetHeight;
 const fixed_btn = document.querySelector('.fixed_button_up');
 const deskHeader = document.querySelector('.header-desktop')
 const mobiHeader = document.querySelector('.header-mobile');
 
 let mobimarked = mobiul[0];
 let deskmarked = deskul[0];
+
+function setBodyHeight(height){
+    return body.style.height = `${height/16}rem`;
+}
 
 function chMarked(previouM, nextM) {
     previouM.classList.remove("marked");
@@ -32,6 +36,9 @@ function closeBoxMobi(openbtn, closebtn, boxmobi){
     closebtn.style.display = 'none';
     boxMobi.style.display = 'none';
 }
+
+setBodyHeight(body.scrollHeight);
+
 
 document.addEventListener('click', (e) =>{
     const et = e.target;
@@ -72,7 +79,6 @@ document.addEventListener('click', (e) =>{
 })
 
 // scroll
-console.log(home, about, services, portfolio, contact);
 
 document.addEventListener('scroll', () => {
     const offsetY = window.pageYOffset;
@@ -166,17 +172,7 @@ document.addEventListener('scroll', () => {
 
 })
 
-/*
-0
-694
-2358
-3052
-3746
-*/
-
-
-
-// slider-carousel
+/* slider-carousel */
 const track = document.querySelector('.carousel_track')
 const slides = Array.from(track.children)
 const nextButton = document.querySelector('#right-triangle')

@@ -24,14 +24,16 @@
 html, body{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 /* style */
 
 div.center{
+    position: absolute;
     width: 100%;
     max-width: 90rem;
-    height: 100%;
+    height: auto;
 }
 
 section.all_vh{
@@ -117,7 +119,6 @@ header.mobile ul li a:hover{
 header.mobile ul li a.marked{
     color: #FFF200;
     font-weight: 400;
-    transition: .5s ease-in-out;
 }
 
 section.header-desktop{
@@ -172,9 +173,8 @@ section.header-desktop .desktop ul li a:hover{
 }
 
 section.header-desktop .desktop ul li a.marked{
-    color: #FFF200;
     font-weight: 400;
-    transition: .5s ease-in-out;
+    color:#FFF200;
 }
 
 /* Home */
@@ -621,6 +621,7 @@ section#Portfolio div.portfolio_carousel .title h1::after{
 
 section#Contact{
     width: 100%;
+    height: 40rem;
 }
 
 section#Contact div.flex_contact{
@@ -677,9 +678,10 @@ section#Contact div.flex_contact form .w100 i{
 /* Footer */
 
 footer{
-    /* position: relative;
+    z-index: 1;
+    position: absolute;
     bottom: 0;
-    left: 0; */
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -732,23 +734,26 @@ footer .copyright p span{
 
 /* button up */
 .fixed_button_up{
+    z-index: 9999;
     visibility: hidden;
     display: block;
     width: 100%;
-    height: 2.7rem;
+    height: 8rem;
     position: relative;
+    top: 0rem;
+    /* background: crimson; */
 }
 
 .fixed_button_up a{
     position: absolute;
-    bottom: -1.5rem;
+    top: -1.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 2.5rem;
-    height: 100%;
+    height: 3em;
     border: none;
     background-color: #FFF200;
     cursor: pointer;
@@ -1081,11 +1086,13 @@ footer .copyright p span{
         width: 3.5rem;
         height: 3.5rem;
         position: fixed;
-        bottom: 10%;
-        right: 5%;
+        top: 80%;
+        right: 2.5%;
     }
 
     .fixed_button_up a{
+        top: 100%;
+        bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;

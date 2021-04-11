@@ -1,0 +1,29 @@
+section.err404{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: top;
+    padding-top: 2rem;
+    width: 25rem;
+    height: 25rem;
+    background-color: #2B2B2B;
+    color: #FFF200;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5rem;
+    box-shadow: 0 .2rem 3px -10px #2B2B2B, 0 .12rem 10px #2B2B2B;
+    background-image: linear-gradient(to bottom, rgba(61,61,61,.55), rgba(61,61,61,.55)), url('../image/sad_eagle.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+section.err404 span{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #FFF;
+}
