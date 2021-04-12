@@ -11,6 +11,10 @@
     <meta name="description" content="Portfólio web para captação de clientes">
     <meta name="keywords" content="web-developer, web, developer, design-sites, sites, institucionais, sites-institucionais, landpage,land-page">
     <meta name="author" content="Franklin Henrique">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo INCLUDE_PATH ?>../assets/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo INCLUDE_PATH ?>../assets/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo INCLUDE_PATH ?>../assets/image/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo INCLUDE_PATH ?>./site.webmanifest">
     <title>Franklin Henrique</title>
 </head>
 

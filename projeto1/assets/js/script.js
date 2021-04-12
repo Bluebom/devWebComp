@@ -190,10 +190,14 @@ document.addEventListener('scroll', () => {
                 value.style.color = '#FFF200'
             }
         })
+        let delay = 0;
         setTimeout(() => {
             progress.forEach((value, i) => {
-                value.style.width = value.getAttribute('completed') + '%';
-                value.style.opacity = '1';
+                delay = i
+                setTimeout(() => { 
+                    value.style.width = value.getAttribute('completed') + '%';
+                    value.style.opacity = '1';
+                }, delay * 750)
             })
         }, 1000)
 
