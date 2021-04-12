@@ -3,7 +3,7 @@
          <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
          <h2>Sou um desenvolvedor web full-stack</h2>
          <div class="see_jobs">
-             <a href="<?php echo INCLUDE_PATH ?>#Porth1">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
+             <a class="call_portfolio" href="<?php echo INCLUDE_PATH ?>#Porth1">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
          </div>
          <!--see_jobs-->
      </div>
@@ -44,7 +44,7 @@
                  <p>Eu sou um desenvolvedor web full-stack jr. Tenho uma grande paixão por aprender e pelo que faço,
                      devido a isso estou sempre me atualizando com as inovações do mercado e sempre disposto a
                      adquirir novos conhecimentos.</p>
-                 <h3><a href="<?php echo INCLUDE_PATH ?>#Contact">Vamos fazer um website sensacional juntos!</a></h3>
+                 <h3><a class="call_contact" href="<?php echo INCLUDE_PATH ?>#Contact">Vamos fazer um website sensacional juntos!</a></h3>
              </div>
              <!--w50-->
              <div class="w50 skills">
