@@ -84,7 +84,8 @@ mobiul.forEach((value) => {
         const element = event.target;
         // smooth scroll
         if (element == value) {
-            const id = value.getAttribute('href').slice(46);
+            const id = value.getAttribute('href').slice(28);
+            console.log(id)
             if (id == '#Home') {
                 window.scroll({
                     top: 0,
@@ -121,7 +122,8 @@ deskul.forEach(value => {
         const element = event.target;
         // smooth scroll
         if (element == value) {
-            const id = value.getAttribute('href').slice(46);
+            const id = value.getAttribute('href').slice(28);
+            console.log(id)
             if (id == '#Home') {
                 window.scroll({
                     top: 0,
