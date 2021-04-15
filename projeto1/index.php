@@ -50,7 +50,6 @@
         <!--desktop w100-->
     </section>
     <!--header-desktop-->
-
     <?php
     $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 

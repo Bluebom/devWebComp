@@ -1,4 +1,4 @@
- <section id="Home" class="all_vh">
+<section id="Home" class="all_vh">
      <div class="bg">
          <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
          <h2>Sou um desenvolvedor web full-stack</h2>
@@ -190,6 +190,30 @@
              <div class="title">
                  <h1>Contato</h1>
              </div><!-- title -->
+             <?php
+                if (isset($_POST["acao"])) {
+                    $postNome = $_POST['nome'];
+                    $postEmail = $_POST['email'];
+                    $postText = $_POST['msg'];
+                    if ($postEmail != '') {
+                        if (filter_var($postEmail, FILTER_VALIDATE_EMAIL)) {
+                            $info = ['subject' => "$postNome", 'body' => "<h1>$postNome</h1> <hr><h2><u>$postEmail</u></h2><hr> <h3>$postText</h3>"];
+                            $email = new Email('', 'franklin@franklinhenrique.com', '', 'FrankY');
+                            $email->addAddress('contato@franklinhenrique.com', 'Contato');
+                            $email->contentEmail($info);
+                            if($email->sendEmail()){
+                                echo "<script>alert('Formulário enviado com sucesso!')</script>";
+                            }else{
+                                echo "<script>alert('Algo deu errado.')</script>";
+                            }
+                        } else {
+                            echo "<script>alert('Email incorreto!')</script>";
+                        }
+                    } else {
+                        echo "<script>alert('verifique o campo email')</script>";
+                    }
+                }
+                ?>
              <form method="post">
                  <p class="w100"><i class="fas fa-user-alt"></i><input placeholder="Nome*" type="text" name="nome" id="Name" required></p>
                  <p class="w100"><i class="fas fa-envelope"></i><input placeholder="Email*" type="email" name="email" id="Email" required></p>
