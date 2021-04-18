@@ -1,4 +1,5 @@
 <?php include('./config.php') ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -60,20 +61,13 @@
     };
     ?>
 
-    <footer>
-        <div class="form_social">
-            <span><i class="fab fa-linkedin-in"></i></span>
-            <span><i class="fab fa-github"></i></span>
-            <span><i class="fab fa-youtube"></i></span>
-        </div><!-- form_social -->
-        <div class="copyright">
-            <p>Franklin Henrique <span>&copy;2021</span></p>
-        </div>
-    </footer>
 
-
-
+    <script src="<?php echo INCLUDE_PATH ?>./assets/js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/script.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./assets/js/menuChangeOnScroll.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./assets/js/smoothScrollOnClick.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./assets/js/carousel.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./ajax/formularios.js"></script>
 </body>
 
 </html>

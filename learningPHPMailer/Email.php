@@ -1,10 +1,13 @@
 <?php
 
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-
-require 'vendor/autoload.php';
+//Load Composer's autoloader
+require './vendor/autoload.php';
 
 class Email
 {
@@ -21,8 +24,8 @@ class Email
         $this->mailer->SMTPAuth = true; //Enable SMTP authentication
         $this->mailer->Username = $uname; //SMTP username
         $this->mailer->Password = $pword; //SMTP password
-        $this->mailer->SMTPSecure = 'ssl'; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $this->mailer->Port = 465; //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $this->mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $this->mailer->Port = 587; //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
         $this->mailer->setFrom($uname, $name);
@@ -35,12 +38,12 @@ class Email
         $this->mailer->addAddress($email,$name); //Add a recipient
     }
 
-    public function contentEmail($info){
+    public function contentEmail($subject, $body){
         //Content
         $this->mailer->isHTML(true); //Set email format to HTML
-        $this->mailer->Subject = $info['subject'];
-        $this->mailer->Body = $info['body'];
-        $this->mailer->AltBody = strip_tags($info['body']);
+        $this->mailer->Subject = $subject;
+        $this->mailer->Body = $body;
+        $this->mailer->AltBody = strip_tags($body);
     }
 
     public function sendEmail()
@@ -49,6 +52,7 @@ class Email
             return false;
         } else {
             return true;
+            echo 'success';
         }
     }
 }

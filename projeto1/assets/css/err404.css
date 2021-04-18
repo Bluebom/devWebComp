@@ -1,3 +1,8 @@
+.wrapper{
+    margin-top: 5rem;
+    width: 100%;
+    height: 100vh;
+}
 section.err404{
     display: flex;
     flex-direction: column;
@@ -5,8 +10,8 @@ section.err404{
     align-items: center;
     text-align: top;
     padding-top: 2rem;
-    width: 25rem;
-    height: 25rem;
+    width: 22rem;
+    height: 22rem;
     background-color: #2B2B2B;
     color: #FFF200;
     position: relative;
