@@ -1,2 +1,2 @@
 <?php
-define('INCLUDE_PATH', 'http://localhost/phpDanki/projeto1/');
+define('INCLUDE_PATH', 'http://franklinhenrique.com/');

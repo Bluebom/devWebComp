@@ -20,6 +20,9 @@
 </head>
 
 <body>
+    <div class="overlay_loading">
+        <img src="<?php echo INCLUDE_PATH ?>./assets/image/loader.gif" alt="enviando os emails">
+    </div>
     <section class="header-mobile">
         <span class="menu_hamburguer e">&equiv;</span>
         <span class="menu_hamburguer x">&times;</span>

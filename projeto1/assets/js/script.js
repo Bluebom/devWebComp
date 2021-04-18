@@ -23,7 +23,10 @@ const mobiul = document.querySelectorAll('.mobile ul li a');
 const deskul = document.querySelectorAll('.desktop ul li a');
 
 const progress = document.querySelectorAll('.skill_lv');
-const include_path = 'http://localhost/phpDanki/projeto1/';
+const loader = document.querySelector('.overlay_loading');
+const success = document.querySelector('span.callback_success');
+const error = document.querySelector('span.callback_error');
+const include_path = 'http://franklinhenrique.com/';
 
 let mobimarked = mobiul[0];
 let deskmarked = deskul[0];

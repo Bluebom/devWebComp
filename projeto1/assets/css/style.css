@@ -28,6 +28,28 @@ html, body{
 
 /* style */
 
+.overlay_loading{
+    visibility: hidden;
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .45);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    transition: height 2s ease-in-out;
+}
+
+.overlay_loading img{
+    display: subgrid;
+    width: 8rem;
+    height: 2rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+    justify-self: center;
+}
+
 div.center{
     width: 100%;
     max-width: 90rem;
@@ -484,6 +506,7 @@ section.flex_rect .w25 a{
 /* Portfolio */
 
 section#Portfolio{
+    padding-bottom: 4rem;
     margin-top: 3rem;
     width: 100%;
     height: 100vh;
@@ -636,6 +659,52 @@ section#Contact{
     width: 100%;
     height: auto;
 }
+
+span.callback_success{
+    display: none;
+    padding: .7rem;
+    background: linear-gradient(to left, #6FCF97, #6FCF97);
+    text-align: left;
+    position: relative;
+    top: -1rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: -0.05rem .1rem 4px rgba(0, 0, 0, .6);
+}
+span.callback_success::before{
+    content: '-';
+    font-size: .005px;
+    position: absolute;
+    bottom: -30%;
+    /* background: linear-gradient(to left, #6FCF97, #6FCF97); */
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid transparent;
+    border-top: 1rem solid #6FCF97;
+}
+
+span.callback_error{
+    display: none;
+    padding: .7rem;
+    background: linear-gradient(to left, #ff2a2a, #ff2a2a);
+    text-align: left;
+    position: relative;
+    top: -1rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: -0.05rem .1rem 4px rgba(0, 0, 0, .6);
+}
+
+span.callback_error::before{
+    content: '-';
+    font-size: .005px;
+    position: absolute;
+    bottom: -30%;
+    /* background: linear-gradient(to left, #6FCF97, #6FCF97); */
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid transparent;
+    border-top: 1rem solid #ff2a2a;
+}
+
 
 section#Contact div.flex_contact{
     width: 100%;

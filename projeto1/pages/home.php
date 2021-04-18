@@ -191,6 +191,8 @@
                 <h1>Contato</h1>
             </div><!-- title -->
             <form method="post">
+                <span class="callback_success">Sua mensagem foi entregue com sucesso!</span>
+                <span class="callback_error">Algo deu errado no envio da sua mensagem.</span>
                 <p class="w100"><i class="fas fa-user-alt"></i><input placeholder="Nome*" type="text" name="name" id="Name" required></p>
                 <p class="w100"><i class="fas fa-envelope"></i><input placeholder="Email*" type="email" name="email" id="Email" required></p>
                 <p class="w100"><textarea name="msg" id="Msg" cols="30" rows="5" placeholder="Deixe sua mensagem aqui!"></textarea></p>
