@@ -4,7 +4,7 @@ $data = array();
 $subject = "Mensagem de " . $_POST['name'];
 $body = '';
 foreach ($_POST as $key => $value) {
-    $body .= ucfirst($key) . ": " . $value;
+    $body .= "<h1>" .ucfirst($key) ."</h1>" .":  $value";
     $body .= "<hr>";
 }
 
