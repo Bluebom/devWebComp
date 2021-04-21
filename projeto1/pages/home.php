@@ -154,32 +154,7 @@
                 <h1>Portfólio</h1>
             </div><!-- title -->
             <section class="carousel_JS">
-                <div class="carousel">
-                    <div id="left-triangle" class="is_hidden"></div>
-                    <!--left_triangle-->
-                    <div class="carousel_track-container">
-                        <ul class="carousel_track">
-                            <li class="carousel_slide current_slide">
-                                <img class="carousel_image" src="<?php echo INCLUDE_PATH ?>assets/image/01.jpg" alt="Um dos projetos que já criei">
-                            </li>
-                            <li class="carousel_slide">
-                                <img class="carousel_image" src="<?php echo INCLUDE_PATH ?>assets/image/02.jpg" alt="Um dos projetos que já criei">
-                            </li>
-                            <li class="carousel_slide">
-                                <img class="carousel_image" src="<?php echo INCLUDE_PATH ?>assets/image/03.jpg" alt="Um dos projetos que já criei">
-                            </li>
-                        </ul>
-                        <!--carousel_track-->
-                    </div>
-                    <!--carousel_track-container-->
-                    <div id="right-triangle"></div>
-                    <!--right_triangle-->
-                    <div class="carousel_nav">
-                        <button class="carousel_indicator current_slide"></button>
-                        <button class="carousel_indicator"></button>
-                        <button class="carousel_indicator"></button>
-                    </div>
-                    <!--carousel_nav-->
+               <!-- aqui vai o owl carousel -->
                 </div>
                 <!--carousel-->
             </section><!-- carousel_JS -->
