@@ -509,7 +509,7 @@ section#Portfolio{
     padding-bottom: 4rem;
     margin-top: 3rem;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #2B2B2B;
     overflow: hidden;
     display: flex;
@@ -525,7 +525,7 @@ section#Portfolio div.down_triangle{
     border-top: 10rem solid #FFF;
 }
 section#Portfolio div.portfolio_carousel{
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -537,6 +537,7 @@ section#Portfolio div.portfolio_carousel h1{
     color: white;
     width: 100%;
     height: auto;
+    justify-self: center;
 }
 
 section#Portfolio div.portfolio_carousel .title h1::after{
@@ -544,115 +545,15 @@ section#Portfolio div.portfolio_carousel .title h1::after{
     border-top: .2rem solid #fff;
 }
 
-
-.carousel_JS{
-    width: 60%;
-    height: 60%;
-    position: relative;
-}
-
-
-.carousel{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 100%;
-    max-height: 38rem;
-    margin: 0 auto;
-}
-
-.carousel_track-container{
+section#Portfolio div.portfolio_carousel div.container{
     width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel_track{
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    position: relative;
-    transition: transform 250ms ease-in;
-}
-
-.carousel_slide{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    max-width: 55rem;
+    height: 80%;
+    padding-right: .1rem;
 }
 
 
-.carousel_image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.is_hidden{
-    display: none;
-}
-
-#left-triangle{
-    margin-right: .5rem;
-    width: 0;
-    height: 0;
-    border-bottom: 1.5rem solid transparent;
-    border-top: 1.5rem solid transparent;
-    border-right: 1.5rem solid #FFF;
-    cursor: pointer;
-    position: absolute;
-    top: 65%;
-    right: 100%;
-}
-
-#left-triangle:hover, #left-triangle:focus{
-    border-right: 1.5rem solid #FFFa;
-}
-
-#right-triangle{
-    margin-left: .5rem;
-    width: 0;
-    height: 0;
-    border-bottom: 1.5rem solid transparent;
-    border-top: 1.5rem solid transparent;
-    border-left: 1.5rem solid #FFF;
-    cursor: pointer;
-    position: absolute;
-    top: 65%;
-    left: 100%;
-}
-#right-triangle:hover, #right-triangle:focus{
-    border-left: 1.5rem solid #FFFa;
-}
-
-.carousel_nav{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 1%;
-    left: 50%;
-    transform: translate(-50%);
-    padding: .1rem 1rem;
-}
-
-.carousel_indicator{
-    width: 1.2rem;
-    height: 1.2rem;
-    padding: 1rem;
-    border: .1rem solid black;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    margin: 0 .8rem;
-    cursor: pointer;
-}
-
-.carousel_indicator.current_slide{
-    background-color: var(--color2B);
-}
 /* Contact */
 
 section#Contact{
@@ -971,25 +872,6 @@ footer .copyright p span{
         
     }
 
-    .carousel_JS{
-        width: 100%;
-        height: 65%;
-    }
-
-    .carousel{
-        width: 85%;
-        height: 100%;
-        position: absolute;
-        top: 30%;
-    }
-
-    .carousel_image{
-        margin-top: 15%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     footer{
         height: 20%;
     }
@@ -1026,8 +908,9 @@ footer .copyright p span{
 
     header.mobile{
         width: 100%;
-        height: 95vh;
+        height: 100vh;
         background: linear-gradient(to bottom, var(--color3C), var(--color3C));
+        padding-bottom: 5rem;
     }
 
     section#Home h1{
@@ -1113,31 +996,6 @@ footer .copyright p span{
         padding: .3rem;
         font-size: 1.2rem;
     
-    }
-
-    .carousel{
-        top: 40%;
-        width: 80%;
-        height: 80%;
-        max-height: 32rem;
-    }
-    .carousel_image{
-        margin-top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .carousel_indicator{
-        width: 1rem;
-        height: 1rem;
-        padding: .8rem;
-        border: .1rem solid black;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 50%;
-        margin: 0 .8rem;
-        cursor: pointer;
     }
 
     section#Contact div.flex_contact form{

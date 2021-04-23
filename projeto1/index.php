@@ -6,6 +6,9 @@
 <head>
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>./assets/css/style.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>./assets/css/err404.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>./assets/css/carousel.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>./jQuery__owlCarousel/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>./jQuery__owlCarousel/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,11 +68,12 @@
     ?>
 
 
-    <script src="<?php echo INCLUDE_PATH ?>./assets/js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/script.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./jQuery__owlCarousel/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./jQuery__owlCarousel/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="<?php echo INCLUDE_PATH ?>./assets/js/carousel.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/menuChangeOnScroll.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/smoothScrollOnClick.js"></script>
-    <script src="<?php echo INCLUDE_PATH ?>./assets/js/carousel.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./ajax/formularios.js"></script>
 </body>
 

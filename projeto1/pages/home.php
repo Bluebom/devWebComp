@@ -153,11 +153,18 @@
             <div class="title">
                 <h1>Portfólio</h1>
             </div><!-- title -->
-            <section class="carousel_JS">
-               <!-- aqui vai o owl carousel -->
+            <div class="container">
+                <div class="owl-carousel">
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/portfolioJCLS.jpg"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/instagram.jpg"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/netflix.jpg"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/responsive.jpg"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/slider.jpg"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/webDesign.jpg"> </div>
                 </div>
-                <!--carousel-->
-            </section><!-- carousel_JS -->
+                <!-- owl-carousel -->
+            </div>
+            <!-- container -->
         </div><!-- portfolio_carousel -->
     </section><!-- Portfolio -->
     <section id="Contact" class="all_vh">

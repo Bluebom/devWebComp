@@ -20,7 +20,7 @@ document.addEventListener('scroll', () => {
             }
         })
 
-    } else if (offsetY < (home + about)) {
+    } else if (offsetY < (home + about - 30)) {
         chMarked(mobimarked, mobiul[1]);
         mobimarked = mobiul[1];
         chMarked(deskmarked, deskul[1]);

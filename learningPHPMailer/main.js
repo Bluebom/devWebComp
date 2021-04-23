@@ -9,7 +9,7 @@ $(document).ready(function () {
                 margin: 2,
             },
             768: {
-                items: 2.2,
+                items: 2.5,
                 nav: true,
                 margin: 10,
             }

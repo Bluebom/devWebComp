@@ -11,7 +11,7 @@ fixed_btn.firstChild.addEventListener('click', (e) => {
 btn_callP.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + porth1 / 2.5,
+        top: home + about + services + porth1,
         behavior: "smooth",
     });
 })
@@ -19,7 +19,7 @@ btn_callP.addEventListener('click', (e) => {
 btn_callC.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + portfolio + 30,
+        top: home + about + services + portfolio + 3*porth1,
         behavior: "smooth",
     });
 })
@@ -28,7 +28,7 @@ serviceBtn.forEach(value =>{
     value.addEventListener('click', (event) => {
         event.preventDefault();
         window.scroll({
-            top: home + about + services + portfolio + 30,
+            top: home + about + services + portfolio + 3*porth1,
             behavior: "smooth",
         })
     })
@@ -63,14 +63,14 @@ mobiul.forEach((value) => {
 
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + porth1 / 3,
+                    top: home + about + services + porth1,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
 
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + porth1 / 5,
+                    top: home + about + services + portfolio + 3*porth1,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
@@ -100,17 +100,17 @@ deskul.forEach(value => {
                 })
             } else if (id == '#Services') {
                 window.scroll({
-                    top: home + about,
+                    top: home + about - 30,
                     behavior: "smooth",
                 })
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + porth1 / 10,
+                    top: home + about + services + porth1,
                     behavior: "smooth",
                 })
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 30,
+                    top: home + about + services + portfolio + 3*porth1,
                     behavior: "smooth",
                 })
             };
