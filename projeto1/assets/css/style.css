@@ -638,12 +638,14 @@ section#Contact .w100 :is(input[type='text'], input[type='email']){
     border: .1rem solid black;
     -moz-appearance: none;
     -webkit-appearance: none;
+    outline: none;
 }
 
 section#Contact .w100 textarea{
     width: 100%;
     padding: .5rem .5rem;
     border: .1rem solid black;
+    outline: none;
 }
 
 section#Contact .w100 input[type='submit']{

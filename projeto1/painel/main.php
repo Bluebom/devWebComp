@@ -1,0 +1,1 @@
+<h2> Wellcome to the Painel <?php echo $_SESSION['user']?></h2>
