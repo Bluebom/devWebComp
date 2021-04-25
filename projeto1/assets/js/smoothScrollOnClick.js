@@ -70,7 +70,7 @@ mobiul.forEach((value) => {
 
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 3*porth1,
+                    top: home + about + services + portfolio + porth1,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
@@ -110,7 +110,7 @@ deskul.forEach(value => {
                 })
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 3*porth1,
+                    top: home + about + services + portfolio + 3.25*porth1,
                     behavior: "smooth",
                 })
             };

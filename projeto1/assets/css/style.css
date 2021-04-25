@@ -659,6 +659,49 @@ section#Contact div.flex_contact form .w100 i{
     transform: translate(-50%,-50%);
 }
 
+section#Contact div.flex_contact div.my_contacts{
+    background: rgba(0, 0, 0, .85);
+    width: 100%;
+    margin: 2rem 0;
+    max-width: 30rem;
+    padding: .7rem 2%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -.1rem .1rem 5px #111;
+}
+
+
+section#Contact div.flex_contact div.my_contacts p{
+    max-width: 18rem;
+    font-weight: normal;
+    font-family: var(--font03);
+    text-indent: .25rem;
+    letter-spacing: .075rem;
+    color: white;
+}
+
+section#Contact div.flex_contact div.my_contacts .wrap{
+    width: 12rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section#Contact div.flex_contact div.my_contacts a:first-of-type{
+    color: #6FCF97;
+    font-size: 2.7rem;
+    text-shadow: -.1rem .1rem 5px #111;
+    
+}
+section#Contact div.flex_contact div.my_contacts a:last-of-type{
+    color: #0088cc;
+    font-size: 2.7rem;
+    text-shadow: -.1rem .1rem 5px #111;
+    
+}
+
 
 
 
@@ -673,6 +716,7 @@ footer{
     gap: .5rem;
     width: 100%;
     height: 20%;
+    max-height: 8rem;
     background-color: var(--color2B);
 }
 
@@ -685,11 +729,11 @@ footer .form_social{
     margin: 0;
 }
 
-footer .form_social span{
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--color3C);
+footer div.form_social a{
     cursor: pointer;
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: var(--color3C);
     box-shadow: 0rem .3rem 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
@@ -697,7 +741,7 @@ footer .form_social span{
     
 }
 
-footer .form_social span i{
+footer div.form_social a i{
     font-size: 1.5rem;
     color: white;
 
@@ -721,9 +765,9 @@ footer .copyright p span{
     visibility: hidden;
     display: block;
     width: 100%;
-    height: 8rem;
+    height: 1rem;
     position: relative;
-    top: 18%;
+    top: 2%;
     /* background: crimson; */
 }
 
@@ -878,7 +922,7 @@ footer .copyright p span{
         height: 20%;
     }
     .fixed_button_up{
-        top: 13%;
+        top: 2%;
     }
 }
 
@@ -999,6 +1043,15 @@ footer .copyright p span{
         font-size: 1.2rem;
     
     }
+    
+    section#Contact{
+        height: 100vh;
+        max-height: 41.5rem;
+    }
+
+    section#Contact div.flex_contact{
+        height: auto;
+    }
 
     section#Contact div.flex_contact form{
         max-width: 21rem;
@@ -1008,9 +1061,6 @@ footer .copyright p span{
         left: 5%;
     }
 
-    section#Contact{
-        height: 80vh;
-    }
 
     footer{
         padding-top: 1rem;

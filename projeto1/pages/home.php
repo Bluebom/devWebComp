@@ -172,6 +172,7 @@
             <div class="title">
                 <h1>Contato</h1>
             </div><!-- title -->
+
             <form method="post">
                 <span class="callback_success">Sua mensagem foi entregue com sucesso!</span>
                 <span class="callback_error">Algo deu errado no envio da sua mensagem.</span>
@@ -180,14 +181,21 @@
                 <p class="w100"><textarea name="msg" id="Msg" cols="30" rows="5" placeholder="Deixe sua mensagem aqui!"></textarea></p>
                 <p class="w100"><input class="btn" type="submit" value="Enviar" name="acao"></p>
             </form>
+            <div class="my_contacts">
+                <p>Você também pode entrar em contato comigo através do whatsApp e Telegram <i class="fas fa-arrow-right"></i></p>
+                <div class="wrap">
+                    <a href="https://t.me/Bluebom" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5583998505251&text=Clique%20em%20continuar%20para%20entrar%20em%20contato%20comigo!" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
         </div><!-- flex_contact -->
     </section><!-- contact -->
     <span class="fixed_button_up"><a href="<?php echo INCLUDE_PATH ?>#Home"><i class="far fa-arrow-alt-circle-up"></i></a></span>
     <footer>
         <div class="form_social">
-            <span><i class="fab fa-linkedin-in"></i></span>
-            <span><i class="fab fa-github"></i></span>
-            <span><i class="fab fa-youtube"></i></span>
+            <a href="https://www.linkedin.com/in/franklin-henrique-dev-web" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bluebom" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UC4i2KAIbJSzX88ztqP9wCjg" target="_blank"><i class="fab fa-youtube"></i></a>
         </div><!-- form_social -->
         <div class="copyright">
             <p>Franklin Henrique <span>&copy;2021</span></p>
