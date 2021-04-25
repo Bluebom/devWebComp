@@ -1,7 +1,7 @@
 <?php
-    if(isset($_GET['loggout'])){
-        Painel::loggout();
-    }
+if (isset($_GET['loggout'])) {
+    Painel::loggout();
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -17,23 +17,66 @@
 <body>
     <section class="topo_painel">
         <aside>
+            <div class="box_user">
+                <?php
+                    if($_SESSION['img'] == ''){
+                ?>
+                <div class="avatar_user">
+                    <i class="fas fa-user"></i>
+                </div>
+                <!-- avatar_user -->
+                <?php
+                    ;} else{
+                ?>
+                <div class="imagem_user">
+                    <img src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'];?>">                        
+                </div>
+                <?php ;};?>
+                <div class="nome_user">
+                    <p><?php echo $_SESSION['nome']; ?></p>
+                    <span><?php pickCargo($_SESSION['cargo']); ?></span>
+                </div>
+                <!-- nome_user -->
+            </div>
+            <!-- box_user -->
         </aside>
         <header>
             <div class="center">
-                <div class="logo">
-                    <h1>Painel de Controle</h1>
+                <div class="menu_btn">
+                    <span>&equiv;</span>
+                    <span>&times;</span>
                 </div>
-                <!-- logo -->
+                <!-- menu_btn -->
+
                 <div class="loggout">
+                    <span>Sair</span>
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
                 <!-- loggout -->
             </div>
             <!-- center -->
-    
+            
         </header>
     </section>
+    <div class="painel_content">
+        <div class="center">
+            <div class="box_content"></div>
+            <!-- box_content -->
+            <div class="box_content"></div>
+            <!-- box_content -->
+            <div class="wrap">
+            <div class="box_content"></div>
+            <!-- box_content -->
+            <div class="box_content"></div>
+            <!-- box_content -->
+            </div>
+            <!-- wrap -->
+        </div>
+        <!-- center -->
+    </div>
+    <!-- painel_content -->
 
+    <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/script.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ $autoload = function($class){
 
 spl_autoload_register($autoload);
 
-define('INCLUDE_PATH', 'http://franklinhenrique.com/');
+define('INCLUDE_PATH', 'http://localhost/development/devWebComp/projeto1/');
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH."painel/");
 
 // Conectar com DB
@@ -14,3 +14,14 @@ define('HOST', 'localhost');
 define('USER', 'exampleMe');
 define('PASSWORD', '8aca7EAE!!');
 define('DATABASE','projeto1');
+
+// functions
+function pickCargo($cargo){
+    $arr = [
+        '0' => 'Normal',
+        '1' => 'Sub Administrador',
+        '2' => 'Administrador',
+    ];
+    
+    echo $arr[$cargo];
+}

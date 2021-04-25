@@ -19,6 +19,14 @@ html, body{
     align-content: center;
 } */
 
+div.center{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    padding: .125rem 2%;
+}
+
 div.box_login{
     max-width: 37.5rem;
     width: 100%;
@@ -105,42 +113,226 @@ section.topo_painel{
     align-self: center;
 }
 
+/* aside */
 aside{
     background: #2b2b2b;
-    width: 20%;
+    width: 25%;
     height: 100%;
     overflow-y: auto;
+    padding: .5rem;
+    margin-left: -25%;
+    z-index: 9999999;
+    transition: all 1s;
 }
 
+.show-sidebar aside{
+    margin-left: 0;
+}
+
+div.box_user{
+    width: 100%;
+    text-align: center;
+}
+
+div.box_user div.avatar_user{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 25rem;  
+    border: .2rem solid #111;
+    margin: 2% auto;
+}
+
+div.box_user div.avatar_user i{
+    margin-top: 1rem;
+    font-size: 3.25rem;
+    color: white;
+    text-shadow: 0 -.125rem 4px #111;
+}
+
+div.box_user div.imagem_user{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 25rem;  
+    border: .3rem solid #111;
+    margin: 2% auto;
+    background-color: #323232;
+}
+
+div.box_user div.imagem_user img{
+    width: 5.2rem;
+    height: 5.4rem;
+    border-radius: 25rem;
+}
+
+
+div.box_user div.nome_user p{
+    color: white;
+    font-weight: 400;
+}
+div.box_user div.nome_user span{
+    color: white;
+    font-size: .85rem;
+    font-weight: 300;
+}
+
+
+
+/* header */
 header{
-    width: 80%;
+    width: 100%;
     height: 3rem;
     background-color: #3D3D3D;
 }
 
 header div.center{
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    max-width: 1170px;
-    padding: .125rem 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header div.logo{
-    color: #FFF200;
-    font-size: 1.25rem;
-    text-shadow: 0 .125rem 4px #111;
-    font-weight: normal;
+header div.center div.menu_btn{
+    width: 3rem;
+    height: auto;
+}
+
+header div.center div.menu_btn span:first-of-type{
+    color: white;
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+header div.center div.menu_btn span:last-of-type{
+    display: none;
+    color: white;
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+section.show-sidebar header div.center div.menu_btn span:first-of-type{
+    display: none;
+}
+section.show-sidebar header div.center div.menu_btn span:last-of-type{
+    display: inline;
 }
 
 header div.loggout{
+    width: auto;
     font-size: 2rem;
+    text-align: right;
 }
 
 header div.loggout a{
     color: white;
+    vertical-align: middle;
+}
 
+header div.loggout span{
+    visibility: hidden;
+    position: relative;
+    top: -.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ccc;
+    border: none;
+    background:linear-gradient(to right, rgba(1, 1, 1, .8), rgba(1, 1, 1, .6) );
+    padding: .1rem .3rem;
+    margin-right: 1rem;
+}
+header div.loggout span::after{
+    position: absolute;
+    right: -36.5%;
+    top: 0;
+    content: '-';
+    font-size: .005px;
+    border-top: .7rem solid transparent;
+    border-bottom: .8rem solid transparent;
+    border-left: .9rem solid  rgba(1, 1, 1, .6);
+}
+
+header div.loggout:hover span{
+    visibility: visible;
+}
+
+div.painel_content{
+    width: 100%;
+    height: calc(100% - 3rem);
+    background-color: #FFF200;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    padding: .75rem;
+}
+
+div.painel_content div.box_content{
+    width: 100%;
+    background-color: white;
+    padding: .75rem;
+    margin-bottom: .7rem;
+
+}
+
+div.painel_content div.wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.painel_content div.wrap div.box_content{
+    width: 48%;
+    background-color: tomato;
+}
+
+@media (max-width: 768px){
+    /* aside */
+    aside{
+        width: 60%;
+        margin-left: -60%;
+    }
+
+    div.box_user div.avatar_user{
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    div.box_user div.avatar_user i{
+        font-size: 2.5rem;
+    }
+    
+    div.box_user div.imagem_user{
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    div.box_user div.imagem_user img{
+        width: 3.2rem;
+        height: 3.4rem;
+    }
+    
+    div.box_user div.nome_user p{
+        font-size: .9rem;
+    }
+    div.box_user div.nome_user span{
+        font-size: .75rem;
+    }
+
+    /* header */
+    
+    header div.center div.menu_btn{
+        width: 2rem;
+    }
+    
+    header div.center div.menu_btn span{
+        font-size: 1.5rem;
+        padding-right: .7rem;
+    }
+
+}
+
+@media (max-width: 576px){
+    aside{
+        width: 100%;
+        margin-left: -100%;
+    }
 }

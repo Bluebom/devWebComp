@@ -19,9 +19,13 @@
                 $sql->execute(array($user, $password));
                 if($sql->rowCount() == 1){
                     // logado
+                    $info = $sql->fetch();
                     $_SESSION['login'] = true;
                     $_SESSION['user'] = $user;
                     $_SESSION['password'] = $password;
+                    $_SESSION['img'] = $info['img'];
+                    $_SESSION['cargo'] = $info['cargo'];
+                    $_SESSION['nome'] = $info['nome'];
                     header('Location:' .INCLUDE_PATH_PAINEL);
                     die();
                 } else{
