@@ -26,7 +26,7 @@ const progress = document.querySelectorAll('.skill_lv');
 const loader = document.querySelector('.overlay_loading');
 const success = document.querySelector('span.callback_success');
 const error = document.querySelector('span.callback_error');
-const include_path = 'http://localhost/development/devWebComp/projeto1/';
+const include_path = 'http://192.168.2.109/development/devWebComp/projeto1/';
 
 let mobimarked = mobiul[0];
 let deskmarked = deskul[0];

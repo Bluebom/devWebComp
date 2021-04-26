@@ -39,6 +39,21 @@ if (isset($_GET['loggout'])) {
                 <!-- nome_user -->
             </div>
             <!-- box_user -->
+            <div class="items_menu"> 
+                    <h2>Cadastro</h2>
+                    <a href="#">Cadastrar Depoimento</a>
+                    <a href="#">Cadastrar Serviço</a>
+                    <a href="#">Cadastrar Slides</a>                    
+                    <h2>Gestão</h2>
+                    <a href="#">Listar Depoimentos</a>
+                    <a href="#">Listar Serviços</a>
+                    <a href="#">Listar Slides</a>
+                    <h2>Administração do painel</h2>
+                    <a href="#">Editar Usuário</a>
+                    <a href="#">Adicionar Usuário</a>
+                    <h2>Configuração Geral</h2>
+                    <a href="#">Editar</a>
+            </div>
         </aside>
         <header>
             <div class="center">
@@ -60,16 +75,29 @@ if (isset($_GET['loggout'])) {
     </section>
     <div class="painel_content">
         <div class="center">
-            <div class="box_content"></div>
+            <div class="box_content">
+                <h1> <i class="fas fa-home"></i> Painel de Controle - Franklin Henrique</h1>
+                <div class="div_content_wrap">
+                    <div class="users_on">
+                        <h2>Usuários Online</h2>
+                        <span>###</span>
+                    </div>
+                    <div class="all_visits">
+                        <h2>Total de Visitas</h2>
+                        <span>###</span>
+                    </div>
+                    <div class="today_visits">
+                        <h2>Visitas Hoje</h2>
+                        <span>###</span>
+                    </div>
+                </div>
+            </div>
             <!-- box_content -->
-            <div class="box_content"></div>
-            <!-- box_content -->
+            <!-- <div class="box_content"></div>
             <div class="wrap">
             <div class="box_content"></div>
-            <!-- box_content -->
             <div class="box_content"></div>
-            <!-- box_content -->
-            </div>
+            </div> -->
             <!-- wrap -->
         </div>
         <!-- center -->

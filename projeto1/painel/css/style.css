@@ -81,6 +81,8 @@ div.box_login input[type=submit]:hover{
     background-color: #6fcf97d0;
 }
 
+
+
 /* box error do painel */
 
 div.erro_box{
@@ -119,7 +121,7 @@ aside{
     width: 25%;
     height: 100%;
     overflow-y: auto;
-    padding: .5rem;
+    padding: .5rem 0;
     margin-left: -25%;
     z-index: 9999999;
     transition: all 1s;
@@ -175,6 +177,34 @@ div.box_user div.nome_user span{
     font-weight: 300;
 }
 
+
+div.items_menu{
+    margin: 2% 0;
+    width: 100%;
+    height: auto;
+}
+
+div.items_menu h2{
+    padding: .5rem .4rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: #222;
+}
+
+div.items_menu a{
+    padding: .5rem .4rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-collapse: separate;
+    font-size: .75rem;
+    border-bottom: .2rem solid #222;
+}
+
+div.items_menu a:hover{
+    background-color: #3D3D3D;
+}
 
 
 /* header */
@@ -258,22 +288,68 @@ header div.loggout:hover span{
 div.painel_content{
     width: 100%;
     height: calc(100% - 3rem);
-    background-color: #FFF200;
     position: absolute;
     top: 3rem;
     left: 0;
     padding: .75rem;
+    transition: all .7s ease-in-out;
+}
+
+.show-sidebar ~ div.painel_content{
+    width: 75%;
+    left: 20%;
 }
 
 div.painel_content div.box_content{
     width: 100%;
     background-color: white;
-    padding: .75rem;
+    padding: 1rem 2rem;
     margin-bottom: .7rem;
 
 }
 
-div.painel_content div.wrap{
+div.painel_content div.box_content h1{
+    padding: 1rem 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+div.painel_content div.box_content div.div_content_wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.painel_content div.box_content div.div_content_wrap div{
+    margin: 2% auto;
+    width: 32.5%;
+    min-width: 13rem;
+    height: auto;
+    padding: 0rem 1rem 1rem 1rem; 
+    color: white;
+}
+
+div.painel_content div.box_content div.div_content_wrap .users_on{
+    background-color: orange; 
+}
+
+div.painel_content div.box_content div.div_content_wrap .all_visits{
+    background-color: tomato;
+}
+
+div.painel_content div.box_content div.div_content_wrap .today_visits{
+    background-color: green;
+}
+
+div.painel_content div.box_content div.div_content_wrap div h2{
+    font-weight: 300;
+    padding: .5rem 0;
+}
+
+/* div.painel_content div.wrap{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -282,7 +358,7 @@ div.painel_content div.wrap{
 div.painel_content div.wrap div.box_content{
     width: 48%;
     background-color: tomato;
-}
+} */
 
 @media (max-width: 768px){
     /* aside */
@@ -328,6 +404,11 @@ div.painel_content div.wrap div.box_content{
         padding-right: .7rem;
     }
 
+    .show-sidebar ~ div.painel_content{
+        width: 100%;
+        left: 0%;
+    }
+
 }
 
 @media (max-width: 576px){
@@ -335,4 +416,11 @@ div.painel_content div.wrap div.box_content{
         width: 100%;
         margin-left: -100%;
     }
+
+    div.painel_content div.box_content > h1{
+        padding: 1rem 0;
+        font-weight: normal;
+        font-size: 1.25rem;
+    }
+    
 }
