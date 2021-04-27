@@ -1,8 +1,8 @@
 <?php
     include('../config.php');
     if(Painel::logado() == false){
-        include('login.php');
+        include('./login.php');
     } else{
-        include('main.php');
+        include('./main.php');
     }
 ?>

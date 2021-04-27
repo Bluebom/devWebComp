@@ -1,19 +1,23 @@
 <?php
 session_start();
+date_default_timezone_set('America/Sao_Paulo');
 $autoload = function($class){
     include('classes/'.$class.'.php');
 };
 
 spl_autoload_register($autoload);
 
-define('INCLUDE_PATH', 'http://192.168.2.109/development/devWebComp/projeto1/');
+define('INCLUDE_PATH', 'http://franklinhenrique.com/');
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH."painel/");
 
 // Conectar com DB
-define('HOST', 'localhost');
-define('USER', 'exampleMe');
-define('PASSWORD', '8aca7EAE!!');
-define('DATABASE','projeto1');
+define('HOST', '192.185.176.109');
+define('USER', 'frankl04_proj');
+define('PASSWORD', '');
+define('DATABASE','frankl04_Projeto1');
+
+// Consts para painel de controle
+define('NOME_EMPRESA', 'Franklin Henrique');
 
 // functions
 function pickCargo($cargo){

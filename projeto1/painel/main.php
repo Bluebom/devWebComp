@@ -63,6 +63,10 @@ if (isset($_GET['loggout'])) {
                 </div>
                 <!-- menu_btn -->
 
+                <div class="home_btn">
+                        <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fas fa-home"></i></a>
+                </div>
+
                 <div class="loggout">
                     <span>Sair</span>
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fas fa-sign-out-alt"></i></a>
@@ -74,33 +78,7 @@ if (isset($_GET['loggout'])) {
         </header>
     </section>
     <div class="painel_content">
-        <div class="center">
-            <div class="box_content">
-                <h1> <i class="fas fa-home"></i> Painel de Controle - Franklin Henrique</h1>
-                <div class="div_content_wrap">
-                    <div class="users_on">
-                        <h2>Usuários Online</h2>
-                        <span>###</span>
-                    </div>
-                    <div class="all_visits">
-                        <h2>Total de Visitas</h2>
-                        <span>###</span>
-                    </div>
-                    <div class="today_visits">
-                        <h2>Visitas Hoje</h2>
-                        <span>###</span>
-                    </div>
-                </div>
-            </div>
-            <!-- box_content -->
-            <!-- <div class="box_content"></div>
-            <div class="wrap">
-            <div class="box_content"></div>
-            <div class="box_content"></div>
-            </div> -->
-            <!-- wrap -->
-        </div>
-        <!-- center -->
+        <?php Painel::loadPage(); ?>
     </div>
     <!-- painel_content -->
 
