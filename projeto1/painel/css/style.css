@@ -86,25 +86,43 @@ div.box_login input[type=submit]:hover{
 /* box error do painel */
 
 div.erro_box{
-    padding: .7rem;
     background: linear-gradient(to left, #ff2a2a, #ff2a2a);
+}
+
+div.callback_success{
+    background: linear-gradient(to left, #6FCF97, #6FCF97);
+}
+
+
+div.erro_box,
+div.callback_success{
+    padding: .5rem;
+    height: 2rem;
     text-align: left;
     position: relative;
-    top: -1rem;
+    top: -.5rem;
     color: white;
     font-weight: bold;
     text-shadow: -0.05rem .1rem 4px rgba(0, 0, 0, .6);
 }
 
 div.erro_box::before{
+    border-top: .95rem solid #ff2a2a;
+}
+
+div.callback_success::before{
+    border-top: .95rem solid #6FCF97;
+}
+
+div.erro_box::before,
+div.callback_success::before{
     content: '-';
     font-size: .005px;
     position: absolute;
-    bottom: -30%;
+    bottom: -40%;
     /* background: linear-gradient(to left, #6FCF97, #6FCF97); */
-    border-right: 1rem solid transparent;
-    border-left: 1rem solid transparent;
-    border-top: 1rem solid #ff2a2a;
+    border-right: .8rem solid transparent;
+    border-left:  .8rem solid transparent;
 }
 
 /* main */
@@ -396,6 +414,58 @@ div.box_content table tr td{
     border-bottom: .1rem solid #3d3d3d;
 }
 
+.box_content form{
+    margin: 2rem 0;
+}
+
+.box_content form label{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: black;
+}
+
+.box_content .form_group{
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.box_content form input[type=text],
+.box_content form input[type=password]
+{
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: normal;
+    width: 100%;
+    height: 2.5rem;
+    padding-left: .5rem;
+}
+
+.box_content form input[type=file]{
+    margin-top: .5rem;
+    width: 100%;
+    padding: .3rem .5rem;
+    border: .1rem solid #ccc;
+    border-radius: .25rem;
+}
+
+.box_content form input[type=submit]{
+    display: block;
+    width: 20%;
+    max-width: 14rem;
+    height: 2.25rem;
+    margin: 2% auto;
+    cursor: pointer;
+    background-color: #6FCF97;
+    font-size: 1.5rem;
+    text-shadow: 0rem .125rem 4px #111;
+    color: white;
+    text-indent: 0;
+}
+
+.box_content form input[type=submit]:hover{
+    background-color: #6fcf97d0;
+}
 
 
 

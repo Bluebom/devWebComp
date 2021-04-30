@@ -1,5 +1,6 @@
 <?php include('./config.php') ?>
 <?php Site::updateUsuarioOnline(); ?>
+<?php Site::contador(); ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -60,7 +61,6 @@
     <!--header-desktop-->
     <?php
     $url = isset($_GET['url']) ? $_GET['url'] : 'home';
-
     if (file_exists("pages/$url.php")) {
         include("pages/$url.php");
     } else {

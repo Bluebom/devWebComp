@@ -41,18 +41,18 @@ if (isset($_GET['loggout'])) {
             <!-- box_user -->
             <div class="items_menu"> 
                     <h2>Cadastro</h2>
-                    <a href="#">Cadastrar Depoimento</a>
-                    <a href="#">Cadastrar Serviço</a>
-                    <a href="#">Cadastrar Slides</a>                    
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Depoimento</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Serviço</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Slides</a>                    
                     <h2>Gestão</h2>
-                    <a href="#">Listar Depoimentos</a>
-                    <a href="#">Listar Serviços</a>
-                    <a href="#">Listar Slides</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Depoimentos</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Serviços</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Slides</a>
                     <h2>Administração do painel</h2>
-                    <a href="#">Editar Usuário</a>
-                    <a href="#">Adicionar Usuário</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>editUser">Editar Usuário</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>addUser">Adicionar Usuário</a>
                     <h2>Configuração Geral</h2>
-                    <a href="#">Editar</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Editar</a>
             </div>
         </aside>
         <header>

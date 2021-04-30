@@ -13,13 +13,14 @@ class Painel
 
     public static function loadPage(){
         if(isset($_GET['url'])){
-            $url = explode('/', $_GET['url']);
-            if(file_exists('pages/'.$url[0].'php')){
-                include('pages/'.$url[0].'php');
-            } else{
+            $url = explode('/',$_GET['url']);
+            if(file_exists('pages/'.$url[0].'.php')){
+                include('pages/'.$url[0].'.php');
+            }else{
+                //Página não existe!
                 header('Location: '.INCLUDE_PATH_PAINEL);
             }
-        } else{
+        }else{
             include('pages/home.php');
         }
     }
@@ -34,5 +35,13 @@ class Painel
     public static function limparUsuariosOnline(){
         $date = date('Y-m-d H:i:s');
         $sql = MySql::conectar()->exec("DELETE FROM `tb_admin.online` WHERE ultima_acao < '$date' - INTERVAL 1 MINUTE");
+    }
+
+    public static function alert($tipo, $mensagem){
+        if($tipo == 'sucess'){
+            echo '<div class="callback_success"><i class="fa fa-check"></i> '.$mensagem.'</div>';
+        } else if($tipo == 'fail'){
+            echo '<div class="erro_box"><i class="fas fa-times"></i> '.$mensagem.'</div>';
+        }
     }
 }

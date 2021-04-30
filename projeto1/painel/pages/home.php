@@ -1,5 +1,12 @@
 <?php 
     $usuariosOnline = Painel::listarUsuariosOnline();
+    $pegarVisitasTotais = MySql::conectar()->prepare("SELECT * FROM `tb_admin.visitas`");
+    $pegarVisitasTotais->execute();
+    $pegarVisitasTotais = $pegarVisitasTotais->rowCount();
+
+    $pegarVisitasHoje = MySql::conectar()->prepare("SELECT * FROM `tb_admin.visitas` WHERE dia = ?");
+    $pegarVisitasHoje->execute(array(date('Y-m-d')));
+    $pegarVisitasHoje = $pegarVisitasHoje->rowCount();
 ?>
 
 <div class="center">
@@ -12,11 +19,11 @@
             </div>
             <div class="all_visits">
                 <h2>Total de Visitas</h2>
-                <span>###</span>
+                <span><?php echo $pegarVisitasTotais;?></span>
             </div>
             <div class="today_visits">
                 <h2>Visitas Hoje</h2>
-                <span>###</span>
+                <span><?php echo $pegarVisitasHoje;?></span>
             </div>
         </div>
     </div>
