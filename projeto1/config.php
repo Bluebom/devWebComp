@@ -11,14 +11,14 @@ define('INCLUDE_PATH', 'http://localhost/development/devWebComp/projeto1/');
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH."painel/");
 
 // Conectar com DB
-// 'HOST', '192.185.176.109'
-// 'USER', 'frankl04_proj'
-// 'PASSWORD', '8aca7EAE!!'
-// 'DATABASE','frankl04_Projeto1'
-define('HOST', 'localhost');
-define('USER', 'exampleMe');
-define('PASSWORD', '8aca7EAE!!');
-define('DATABASE','projeto1');
+// define('HOST', '192.185.176.109');
+// define('USER', 'frankl04_proj');
+// define('PASSWORD', '8aca7EAE!!');
+// define('DATABASE','frankl04_Projeto1');
+define('HOST','localhost');
+define('USER','root');
+define('PASSWORD','');
+define('DATABASE','projeto_01');
 
 // Consts para painel de controle
 define('NOME_EMPRESA', 'Franklin Henrique');
