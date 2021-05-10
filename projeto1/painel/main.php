@@ -41,18 +41,18 @@ if (isset($_GET['loggout'])) {
             <!-- box_user -->
             <div class="items_menu"> 
                     <h2>Cadastro</h2>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Depoimento</a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Serviço</a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Slides</a>                    
+                    <a <?php selecionadoMenu('cadastrar-depoimento');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Depoimento</a>
+                    <a <?php selecionadoMenu('cadastrar-servico');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Serviço</a>
+                    <a <?php selecionadoMenu('cadastrar-slides');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Cadastrar Slides</a>                    
                     <h2>Gestão</h2>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Depoimentos</a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Serviços</a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Slides</a>
+                    <a <?php selecionadoMenu('listar-depoimentos');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Depoimentos</a>
+                    <a <?php selecionadoMenu('listar-servicos');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Serviços</a>
+                    <a <?php selecionadoMenu('listar-slides');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Listar Slides</a>
                     <h2>Administração do painel</h2>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>editUser">Editar Usuário</a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>addUser">Adicionar Usuário</a>
+                    <a <?php selecionadoMenu('editUser');?> href="<?php echo INCLUDE_PATH_PAINEL?>editUser">Editar Usuário</a>
+                    <a <?php selecionadoMenu('adicionar-usuario');?> <?php checkPermissionMenu(2);?> href="<?php echo INCLUDE_PATH_PAINEL?>adicionar-usuario">Adicionar Usuário</a>
                     <h2>Configuração Geral</h2>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL?>#">Editar</a>
+                    <a <?php selecionadoMenu('editar');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Editar</a>
             </div>
         </aside>
         <header>

@@ -34,3 +34,28 @@ function pickCargo($cargo){
     
     echo $arr[$cargo];
 }
+
+function selecionadoMenu($par){
+    $url = explode('/', @$_GET['url'])[0];
+    if($url == $par){
+        // <i class="fas fa-angle-double-right"></i>
+        echo 'class="menu-active"';
+    }
+}
+
+function checkPermissionMenu($permission){
+    if($_SESSION['cargo'] >= $permission){
+        return;
+    } else{
+        echo 'style="display: none;"';
+    }
+}
+
+function checkPermissionPage($permission){
+    if($_SESSION['cargo'] >= $permission){
+        return;
+    } else{
+        include('painel/pages/permission_denied.php');
+        die();
+    }
+}

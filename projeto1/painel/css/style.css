@@ -145,6 +145,16 @@ aside{
     transition: all 1s;
 }
 
+aside a.menu-active{
+    background-color: #3D3D3D;
+}
+
+aside a.menu-active::before{
+    content: ' \00BB  ';
+    font-size: 1.2rem;
+    color: #111;
+}
+
 .show-sidebar aside{
     margin-left: 0;
 }
