@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
 }
 
 html, body{
@@ -461,8 +464,8 @@ div.box_content table tr td{
 
 .box_content form input[type=submit]{
     display: block;
-    width: 20%;
-    max-width: 14rem;
+    width: 100%;
+    max-width: 10rem;
     height: 2.25rem;
     margin: 2% auto;
     cursor: pointer;
