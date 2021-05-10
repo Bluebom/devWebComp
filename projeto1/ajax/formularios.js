@@ -20,6 +20,7 @@ $(function () {
                         success.style.display = 'none';
                     }, 4000)
                 } else {
+                    loader.style.visibility = 'hidden';
                     error.style.display = 'inline';
                     setTimeout(() => { 
                         error.style.display = 'none';

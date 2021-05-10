@@ -38,10 +38,37 @@ class Painel
     }
 
     public static function alert($tipo, $mensagem){
-        if($tipo == 'sucess'){
+        if($tipo == 'success'){
             echo '<div class="callback_success"><i class="fa fa-check"></i> '.$mensagem.'</div>';
         } else if($tipo == 'fail'){
             echo '<div class="erro_box"><i class="fas fa-times"></i> '.$mensagem.'</div>';
         }
+    }
+
+    public static function imagemValida($imagem){
+        if($imagem['type'] == 'image/jpeg' || 
+           $imagem['type'] == 'image/jpg'  ||
+           $imagem['type'] == 'image/png'){
+               $tamanho = intval($imagem['size']/1024);
+               if($tamanho < 300) {
+                   return true;
+               } else {
+                   return false;
+               }
+           } else {
+               return false;
+           }
+    }
+
+    public static function uploadFile($file){
+        if(move_uploaded_file($file['tmp_name'], BASE__DIR__PAINEL .'/uploads/'. $file['name'])){
+            return $file['name'];
+        } else {
+            return false;
+        }
+    }
+
+    public static function deleteFile($file){
+        @unlink(BASE__DIR__PAINEL. 'uploads/'. $file);
     }
 }

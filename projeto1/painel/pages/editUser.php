@@ -4,7 +4,39 @@
 
         <?php if(isset($_POST['acao'])){
             // ENVIEI MEU FORM
-            Painel::alert('sucess', 'Cadastro realizado com sucesso!');
+            // Painel::alert('success', 'Cadastro realizado com sucesso!');
+
+            $nome = $_POST['nome'];
+            $senha = $_POST['password'];
+            $img = $_FILES['img'];
+            $imgAtual = $_SESSION['img'];
+            $usuario = new Usuario();
+            if($img['name'] != '')
+            {
+                if(Painel::imagemValida($img)){
+                    Painel::deleteFile($imgAtual);
+                    $img = Painel::uploadFile($img);
+                    $_SESSION['img'] = $img;
+                    if($usuario->atualizarUsuario($nome, $senha, $img))
+                    {
+                        Painel::alert('success', 'Cadastro realizado com sucesso!');
+                    } else
+                    {
+                        Painel::alert('fail', 'Falha no cadastro!');
+                    };
+                } else {
+                    Painel::alert('fail', 'O formato da imagem não é válido!');
+                };
+            } else {
+                $img = $imgAtual;
+                if($usuario->atualizarUsuario($nome, $senha, $img))
+                {
+                    Painel::alert('success', 'Cadastro realizado com sucesso!');
+                } else
+                {
+                    Painel::alert('fail', 'Falha no cadastro!');
+                };
+            }
         }?>
 
         <div class="form_group">
@@ -13,7 +45,7 @@
         <!-- form_group -->
 
         <div class="form_group">
-        <label>senha: <p><input name="senha" type="password" value="<?php echo $_SESSION['password']?>" required></p></label>
+        <label>senha: <p><input name="password" type="password" value="<?php echo $_SESSION['password']?>" required></p></label>
         </div>
         <!-- form_group -->
 
@@ -21,7 +53,6 @@
         <label>
             Imagem: 
             <p><input name="img" type="file"></p>
-            <p><input type="hidden" name="imagem_atual" value="<?php echo $_SESSION['img']?>"></p>
         </label>
         </div>
         <!-- form_group -->

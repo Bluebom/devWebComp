@@ -7,7 +7,7 @@
                 $token = $_SESSION['online'];
                 $horarioAtual = date('Y-m-d H:i:s');
                 $check = MySql::conectar()->prepare("SELECT `id` FROM `tb_admin.online` WHERE token = ?");
-                $check->execute($token);
+                $check->execute(array($token));
 
                 if($check->rowCount() == 1){
                     $sql = MySql::conectar()->prepare("UPDATE `tb_admin.online` SET ultima_acao = ? WHERE token = ?");
