@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="box_content">
-        <h1> <i class="fas fa-users"></i> Usuários Online</h1>
+        <h1> <i class="fas fa-users"></i> Usuários Online no site</h1>
         <table>
             <th>IP</th>
             <th>Última ação</th>
@@ -39,6 +39,25 @@
             <tr>
                 <td><?php echo $value['ip'];?></td>
                 <td><?php echo date('d/m/Y H:i' ,strtotime($value['ultima_acao']));?></td>
+            </tr>
+            <?php }?>
+        </table>
+    </div>
+    <div class="box_content">
+        <h1> <i class="fas fa-users-cog"></i> Usuários do Painel</h1>
+        <table>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <?php 
+                $usuariosPainel = MySql::conectar()->prepare("SELECT * FROM `tb_admin.users`");
+                $usuariosPainel->execute();
+                $usuariosPainel = $usuariosPainel->fetchAll();
+                foreach ($usuariosPainel as $key => $value) {
+                    # code...
+            ?>
+            <tr>
+                <td><?php echo $value['user'];?></td>
+                <td><?php echo pickCargo($value['cargo']);?></td>
             </tr>
             <?php }?>
         </table>

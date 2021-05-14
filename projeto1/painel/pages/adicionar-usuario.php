@@ -3,17 +3,19 @@
 ?>
 <div class="box_content">
     <h2><i class="fas fa-pen"></i> Adicionar Usuário</h2>
+    
     <form method="post" enctype="multipart/form-data">
 
-        <?php if(isset($_POST['acao'])){
-                    Painel::alert('fail', 'Falha no cadastro!');
-                    Painel::alert('success', 'Cadastro realizado com sucesso!');
-
-
+        <?php 
+        if(isset($_POST['acao']))
+        {
+                    // Painel::alert('fail', 'Falha no cadastro!');
+                    // Painel::alert('success', 'Cadastro realizado com sucesso!');
             $login = $_POST['login'];
             $nome = $_POST['nome'];
             $senha = $_POST['password'];
             $cargo = $_POST['cargo'];
+            echo '<script>console.log("'.$cargo.'")</script>';
             $img = $_FILES['img'];
             $usuario = new Usuario();
             if($cargo == '')
@@ -29,12 +31,15 @@
                 } else if(Painel::imagemValida($img) == false)
                 {
                     Painel::alert('fail', 'O formato da imagem não é válido!');
-                }else if(Painel::userExist(login))
+                }else if(Usuario::userExist($login))
                 {
-                    Painel::alert('fail', 'Esse login já existe!');
+                    Painel::alert('fail', 'Esse login já existe! Selecione outro por favor.');
                 } else 
                 {
                     // cadastrar banco no dados
+                    // Painel::alert('success', 'Cadastro realizado com sucesso!');
+                    $img = Painel::uploadFile($img);
+                    $usuario->cadastrarUsuario($login, $senha, $img, $nome, $cargo);
                 }
             }
         }?>
@@ -55,13 +60,22 @@
         <!-- form_group -->
 
         <div class="form_group">
-        <label class="down-arrow">Cargo: <p><select name="cargo">
+        <label class="down-arrow">Cargo:
+        <p><select name="cargo">
             <?php
                 foreach (Painel::$cargos as $key => $value){
-                    if($key < $_SESSION['cargo']) echo '<option value "'.$key.'">'.$value.'</option>';
+                    if($key < $_SESSION['cargo']){
+                        if($key == 0){
+                            echo '<option value="'.$key.'" selected>'.$value.'</option>';
+
+                        } else {
+                            echo '<option value="'.$key.'">'.$value.'</option>';
+                        }
+                    } 
                 }
             ?>
-        </select></p></label>
+        </select></p>
+        </label>
         </div>
         <!-- form_group -->
 
