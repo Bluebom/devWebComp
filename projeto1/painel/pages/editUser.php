@@ -45,7 +45,7 @@
         <!-- form_group -->
 
         <div class="form_group">
-        <label>senha: <p><input name="password" type="password" value="<?php echo $_SESSION['password']?>" required></p></label>
+        <label>Senha: <p><input name="password" type="password" value="<?php echo $_SESSION['password']?>" required></p></label>
         </div>
         <!-- form_group -->
 

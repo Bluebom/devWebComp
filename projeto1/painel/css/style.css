@@ -5,15 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    outline: none;
 }
 
 html, body{
     height: 100%;
     background-color: #e5e5e5;
     
+}
+
+input{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: .1rem solid #ccc;
 }
 
 /* body{
@@ -52,7 +56,7 @@ div.box_login h2{
 }
 
 div.box_login input{
-    width: 100%;
+    width: 96%;
     height: 2.5rem;
     border: none;
     border-radius: 25rem;
@@ -258,7 +262,7 @@ header div.center div.menu_btn{
 
 header div.center div.menu_btn span:first-of-type{
     color: white;
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding-right: 1rem;
     cursor: pointer;
 }
@@ -266,7 +270,7 @@ header div.center div.menu_btn span:first-of-type{
 header div.center div.menu_btn span:last-of-type{
     display: none;
     color: white;
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding-right: 1rem;
     cursor: pointer;
 }
@@ -454,10 +458,34 @@ div.box_content table tr td{
     padding-left: .5rem;
 }
 
+.box_content form select{
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: normal;
+    width: 100%;
+    height: 2.75rem;
+    padding: .5rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: .1rem solid #ccc;
+    cursor: pointer;
+}
+
+.box_content form .down-arrow::after{
+    display: block;
+    text-align: right;
+    margin-top: -2.25rem;
+    content: '\2193';
+    font-size: 1.75rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
 .box_content form input[type=file]{
     margin-top: .5rem;
     width: 100%;
-    padding: .3rem .5rem;
+    padding: .5rem;
     border: .1rem solid #ccc;
     border-radius: .25rem;
 }
@@ -465,7 +493,6 @@ div.box_content table tr td{
 .box_content form input[type=submit]{
     display: block;
     width: 100%;
-    max-width: 10rem;
     height: 2.25rem;
     margin: 2% auto;
     cursor: pointer;
@@ -473,6 +500,8 @@ div.box_content table tr td{
     font-size: 1.5rem;
     text-shadow: 0rem .125rem 4px #111;
     color: white;
+    border: .1rem solid green;
+    border-radius: .25rem;
     text-indent: 0;
 }
 

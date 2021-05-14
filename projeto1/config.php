@@ -24,15 +24,10 @@ define('DATABASE','projeto_01');
 // Consts para painel de controle
 define('NOME_EMPRESA', 'Franklin Henrique');
 
+
 // functions
-function pickCargo($cargo){
-    $arr = [
-        '0' => 'Normal',
-        '1' => 'Sub Administrador',
-        '2' => 'Administrador',
-    ];
-    
-    echo $arr[$cargo];
+function pickCargo($key){
+    echo Painel::$cargos[$key];
 }
 
 function selecionadoMenu($par){
