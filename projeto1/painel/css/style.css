@@ -610,7 +610,27 @@ td a.btn_delete:hover{
     background-color: #ff0038cc;
 }
 
+div.paginacao {
+    display: block;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
 
+div.paginacao > a {
+    display: block;
+    color: #222;
+    padding: 0 .25rem;
+    text-decoration: none;
+    border: .09rem solid #555;
+    border-radius: .15rem;
+    transition: all 1s;
+}
+
+div.paginacao > a.selected {
+    background-color: #6fcf97d0;
+}
 
 
 

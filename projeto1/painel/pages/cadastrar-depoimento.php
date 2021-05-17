@@ -2,7 +2,7 @@
     checkPermissionPage(2);
 ?>
 <div class="box_content">
-    <h2><i class="fas fa-pen"></i> Adicionar depoimentos</h2>
+    <h2><i class="fas fa-pen"></i> Adicionar Depoimentos</h2>
     
     <form method="post" enctype="multipart/form-data">
 

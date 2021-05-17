@@ -105,9 +105,27 @@ class Painel
         return $certo;
     }
 
-    public static function selectAll($table){
-        $sql = MySql::conectar()->prepare("SELECT * FROM `$table`");
+    public static function selectAll($table, $page = null, $perPage = null){
+        if($page == null && $perPage == null){
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$table`");
+        } else {
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$table` LIMIT $page, $perPage");
+        }
         $sql->execute();
         return $sql->fetchAll();
+    }
+
+    public static function deleteLine($table, $id = false){
+        if($id == false){
+            $sql = MySql::conectar()->prepare("DELETE FROM `$table`");
+        } else{
+            $sql = MySql::conectar()->prepare("DELETE FROM `$table` WHERE id = $id");
+        }
+        $sql->execute();
+    }
+
+    public static function redirect($url){
+        echo '<script>location.href="'.$url.'"</script>';
+        die();
     }
 }
