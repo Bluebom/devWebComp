@@ -37,9 +37,9 @@
                 } else 
                 {
                     // cadastrar banco no dados
-                    // Painel::alert('success', 'Cadastro realizado com sucesso!');
                     $img = Painel::uploadFile($img);
                     $usuario->cadastrarUsuario($login, $senha, $img, $nome, $cargo);
+                    Painel::alert('success', 'Cadastro realizado com sucesso!');
                 }
             }
         }?>

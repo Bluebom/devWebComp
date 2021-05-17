@@ -78,6 +78,36 @@ class Painel
     }
 
     public static function deleteFile($file){
-        @unlink(BASE__DIR__PAINEL. 'uploads/'. $file);
+        @unlink(BASE__DIR__PAINEL. '/uploads/'. $file);
+    }
+
+    public static function insert($arr){
+        $certo = true;
+        $nome_tabela = $arr['nome_tabela'];
+        $query = "INSERT INTO `$nome_tabela` VALUES (null";
+        foreach ($arr as $key => $value) {
+            $nome = $key;
+            if($nome == 'acao' || $nome == 'nome_tabela'){
+                continue;
+            } 
+            if($value == '') {
+                $certo = false;
+                break;
+            }
+            $query .= ",?";
+            $parametros[] = $value;
+        }
+        $query .= ")";
+        if($certo == true){
+            $sql = MySql::conectar()->prepare($query);
+            $sql->execute($parametros);
+        }
+        return $certo;
+    }
+
+    public static function selectAll($table){
+        $sql = MySql::conectar()->prepare("SELECT * FROM `$table`");
+        $sql->execute();
+        return $sql->fetchAll();
     }
 }

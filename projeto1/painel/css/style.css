@@ -513,7 +513,8 @@ div.box_content table tr td{
 }
 
 .box_content form input[type=text],
-.box_content form input[type=password]
+.box_content form input[type=password],
+textarea
 {
     margin-top: .5rem;
     font-size: 1rem;
@@ -521,6 +522,12 @@ div.box_content table tr td{
     width: 100%;
     height: 2.5rem;
     padding-left: .5rem;
+}
+
+.box_content textarea{
+    height: 10rem;
+    padding: .5rem;
+    resize: vertical;
 }
 
 .box_content form select{
@@ -573,6 +580,39 @@ div.box_content table tr td{
 .box_content form input[type=submit]:hover{
     background-color: #6fcf97d0;
 }
+
+/* Listar */
+td a.btn_edit, 
+td a.btn_delete
+{
+    text-decoration: none;
+    padding: .25rem .75rem;
+    height: auto;
+    color: white;
+    cursor: pointer;
+    box-shadow: .05rem .05rem 1px black;
+    font-size: 1rem;
+}
+
+td a.btn_edit{
+    background-color: #008dff;
+}
+
+td a.btn_delete{
+    background-color: #ff0038;
+}
+
+td a.btn_edit:hover{
+    background-color: #008dffcc;
+}
+
+td a.btn_delete:hover{
+    background-color: #ff0038cc;
+}
+
+
+
+
 
 
 
