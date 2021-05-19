@@ -5,7 +5,6 @@ const home = document.querySelector('#Home').offsetHeight - 30;
 const about = document.querySelector('#About').offsetHeight;
 const services = document.querySelector('#Services').offsetHeight;
 const portfolio = document.querySelector('#Portfolio').offsetHeight;
-const porth1 = document.querySelector('#Porth1').offsetHeight;
 
 // btns
 const openBtn = document.querySelector('span.e')

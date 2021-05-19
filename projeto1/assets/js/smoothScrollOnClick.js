@@ -56,21 +56,21 @@ mobiul.forEach((value) => {
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
             } else if (id == '#Services') {
                 window.scroll({
-                    top: home + about + porth1 / 5,
+                    top: home + about,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
 
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + porth1,
+                    top: home + about + services + 80,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
 
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + porth1,
+                    top: home + about + services + portfolio + 80,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
@@ -100,17 +100,17 @@ deskul.forEach(value => {
                 })
             } else if (id == '#Services') {
                 window.scroll({
-                    top: home + about - 30,
+                    top: home + about,
                     behavior: "smooth",
                 })
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + porth1,
+                    top: home + about + services + 80,
                     behavior: "smooth",
                 })
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 3.25*porth1,
+                    top: home + about + services + portfolio + 80,
                     behavior: "smooth",
                 })
             };

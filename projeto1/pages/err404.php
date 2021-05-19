@@ -7,12 +7,12 @@
 </div>
 <!-- wrapper -->
 <footer style="height: 8rem; position:relative; bottom:0;">
-    <div class="form_social">
-        <span><i class="fab fa-linkedin-in"></i></span>
-        <span><i class="fab fa-github"></i></span>
-        <span><i class="fab fa-youtube"></i></span>
-    </div><!-- form_social -->
-    <div class="copyright">
-        <p>Franklin Henrique <span>&copy;2021</span></p>
-    </div>
+        <div class="form_social">
+            <a href="https://www.linkedin.com/in/franklin-henrique-dev-web" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Bluebom" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UC4i2KAIbJSzX88ztqP9wCjg" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div><!-- form_social -->
+        <div class="copyright">
+            <p>Franklin Henrique <span>&copy;2021</span></p>
+        </div>
 </footer>

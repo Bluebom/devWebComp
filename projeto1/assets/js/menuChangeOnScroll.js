@@ -11,12 +11,15 @@ document.addEventListener('scroll', () => {
         fixed_btn.style.visibility = 'hidden';
         mobiHeader.style.background = '#2B2B2B';
         deskHeader.style.background = '#2B2B2B';
+        deskHeader.style.borderBottom = '3px solid #fff200';
         openBtn.style.color = '#FFF'
         closeBtn.style.color = '#FFF'
         deskul.forEach((value, i) => {
             value.style.color = 'white'
             if (value.classList.contains('marked')) {
                 value.style.color = '#FFF200'
+            } else {
+                value.style.fontWeight = 'normal'
             }
         })
 
@@ -27,6 +30,7 @@ document.addEventListener('scroll', () => {
         deskmarked = deskul[1];
         fixed_btn.style.visibility = 'visible';
         deskHeader.style.background = '#2B2B2B';
+        deskHeader.style.borderBottom = '3px solid #fff200';
         mobiHeader.style.background = '#2B2B2B';
         openBtn.style.color = '#FFF'
         closeBtn.style.color = '#FFF'
@@ -34,6 +38,8 @@ document.addEventListener('scroll', () => {
             value.style.color = 'white'
             if (value.classList.contains('marked')) {
                 value.style.color = '#FFF200'
+            } else {
+                value.style.fontWeight = 'normal'
             }
         })
         let delay = 0;
@@ -55,12 +61,15 @@ document.addEventListener('scroll', () => {
         fixed_btn.style.visibility = 'visible';
         mobiHeader.style.background = '#2B2B2B';
         deskHeader.style.background = '#2B2B2B';
+        deskHeader.style.borderBottom = '3px solid #fff200';
         openBtn.style.color = '#FFF';
         closeBtn.style.color = '#FFF'
         deskul.forEach((value, i) => {
             value.style.color = 'white'
             if (value.classList.contains('marked')) {
                 value.style.color = '#FFF200'
+            } else {
+                value.style.fontWeight = 'normal'
             }
         })
     } else if (offsetY < (home + about + services + portfolio)) {
@@ -71,10 +80,12 @@ document.addEventListener('scroll', () => {
         fixed_btn.style.visibility = 'visible';
         mobiHeader.style.background = 'white';
         deskHeader.style.background = 'white';
+        deskHeader.style.borderBottom = '3px solid #a9aeb3';
         deskul.forEach((value, i) => {
             value.style.color = '#2B2B2B'
             if (value.classList.contains('marked')) {
-                value.style.color = 'black'
+                value.style.color = 'black';
+                value.style.fontWeight = 'bold'
             }
         })
         openBtn.style.color = '#2B2B2B'
@@ -87,12 +98,15 @@ document.addEventListener('scroll', () => {
         fixed_btn.style.visibility = 'visible';
         mobiHeader.style.background = '#2B2B2B';
         deskHeader.style.background = '#2B2B2B';
+        deskHeader.style.borderBottom = '3px solid #fff200';
         openBtn.style.color = '#FFF'
         closeBtn.style.color = '#FFF'
         deskul.forEach((value, i) => {
             value.style.color = 'white'
             if (value.classList.contains('marked')) {
                 value.style.color = '#FFF200'
+            } else {
+                value.style.fontWeight = 'normal'
             }
         })
 

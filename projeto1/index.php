@@ -37,7 +37,7 @@
                     <li><a href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfolio</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
                 </ul>
             </nav>
@@ -51,7 +51,7 @@
                     <li><a href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfolio</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
                 </ul>
             </nav>

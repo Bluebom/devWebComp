@@ -2,7 +2,7 @@
     <section id="Home" class="all_vh">
         <div class="bg">
             <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
-            <h1>Sou um desenvolvedor web full-stack</h1>
+            <h1>Sou um desenvolvedor web full-stack.</h1>
             <div class="see_jobs">
                 <a class="call_portfolio" href="<?php echo INCLUDE_PATH ?>#Porth1">Veja o meu trabalho </a>
                 <i class="fas fa-arrow-right"></i>
@@ -127,7 +127,7 @@
             <div class="flex_service 1">
 
                 <div class="w25">
-                    <i class="fas fa-chart-line"></i>
+                    <i id="performance" class="fas fa-chart-line"></i>
                     <p>Procurando melhorar a performance do seu site, SEO, ou a experiência do usuário? </p>
                     <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
                 </div><!-- w25 -->

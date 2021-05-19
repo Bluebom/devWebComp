@@ -7,7 +7,10 @@ $autoload = function($class){
 
 spl_autoload_register($autoload);
 
+// http://franklinhenrique.com/
+http://localhost/dashboard/devWebComp/projeto1/
 define('INCLUDE_PATH', 'http://localhost/dashboard/devWebComp/projeto1/');
+// define('INCLUDE_PATH', 'http://franklinhenrique.com/');
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH."painel/");
 define('BASE__DIR__PAINEL', __DIR__. '/painel' );
 
