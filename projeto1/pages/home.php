@@ -40,7 +40,7 @@
         <!--hexx_about-->
         <section class="who_i_am">
             <div class="w50 description">
-                <img src="<?php echo INCLUDE_PATH ?>assets/image/hexx_1Me.png" alt="uma foto minha">
+                <img src="<?php echo INCLUDE_PATH ?>assets/image/hexx1Me.svg" alt="uma foto minha">
                 <h2>Quem é Franklin ?</h2>
                 <p>Eu sou um desenvolvedor web full-stack jr. Tenho uma grande paixão por aprender e pelo que faço,
                     devido a isso estou sempre me atualizando com as inovações do mercado e sempre disposto a

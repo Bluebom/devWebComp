@@ -274,6 +274,7 @@ section#Home .see_jobs:hover > i{
 div.center section#About{
     width: 100%;
     height: auto;
+    min-height: 100vh;
     padding: 0 20px;
     padding-bottom: 1rem;
     background-color: rgba(170, 170, 170, 0.1);
@@ -463,24 +464,24 @@ div.skills h2{
 /* Services */
 section#Services{
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 100vh;
 }
 
 section.flex_rect{
     width: 100%;
-    height: 98%;
+    height: calc(100% - 100px);
     margin-top: -2rem;
     padding: 0 3rem;
 }
 
 section.flex_rect .flex_service{
-    margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    height: 40%;
+    height: 80%;
 }
 
 section.flex_rect .w25{
@@ -545,7 +546,8 @@ section#Portfolio{
     margin-top: 3rem;
     width: 100%;
     height: auto;
-    min-height: calc(100vh + 10rem);
+    min-height: 100vh;
+    padding-bottom: 3rem;
     background-color: #2B2B2B;
     overflow: hidden;
     display: flex;
@@ -558,9 +560,9 @@ section#Portfolio{
 section#Portfolio div.down_triangle{
     position: absolute;
     top: 0;
-    border-right: 44rem solid transparent;
-    border-left: 44rem solid transparent;
-    border-top: 10rem solid #FFF;
+    border-right: 100vw solid transparent;
+    border-left: 100vw solid transparent;
+    border-top: 20vh solid #FFF;
 }
 section#Portfolio div.portfolio_carousel{
     width: 90%;
@@ -572,7 +574,7 @@ section#Portfolio div.portfolio_carousel{
 }
 
 section#Portfolio div.portfolio_carousel h1{
-    margin-top: 10rem;
+    margin-top: 20vh;
     color: white;
     width: 100%;
     height: auto;
@@ -1075,8 +1077,8 @@ footer .copyright p span{
         height: 20px;
     }
 
-    section.flex_rect{
-        padding: 0 1rem;
+    section#Services{
+        height: auto;
     }
 
     section.flex_rect .flex_service{
@@ -1085,17 +1087,13 @@ footer .copyright p span{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        height: 50%;
+        height: auto;
         padding: 0 5%;
     }
     
     section.flex_rect .w25{
-        margin-top: 0;
-        margin-bottom: 7%;
         width: 100%;
-        min-width: 11rem;
-        height: 33%;
-        min-height: 11rem;
+        height: auto;
     }
 
 
@@ -1125,11 +1123,8 @@ footer .copyright p span{
     }
 
     section#Portfolio div.portfolio_carousel h1{
-        margin-top: 0;
+        margin-top: 22vh;
         color: white;
-        width: 100%;
-        height: auto;
-        justify-self: center;
     }
 
     section#Contact div.flex_contact{
