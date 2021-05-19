@@ -11,7 +11,7 @@ fixed_btn.firstChild.addEventListener('click', (e) => {
 btn_callP.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + porth1,
+        top: home + about + services + 160,
         behavior: "smooth",
     });
 })
@@ -19,7 +19,7 @@ btn_callP.addEventListener('click', (e) => {
 btn_callC.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + portfolio + 3*porth1,
+        top: home + about + services + portfolio + 80,
         behavior: "smooth",
     });
 })
@@ -28,7 +28,7 @@ serviceBtn.forEach(value =>{
     value.addEventListener('click', (event) => {
         event.preventDefault();
         window.scroll({
-            top: home + about + services + portfolio + 3*porth1,
+            top: home + about + services + portfolio + 80,
             behavior: "smooth",
         })
     })

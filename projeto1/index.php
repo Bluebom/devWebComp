@@ -29,6 +29,7 @@
         <img src="<?php echo INCLUDE_PATH ?>./assets/image/loader.gif" alt="enviando os emails">
     </div>
     <section class="header-mobile">
+        <div class="headerToWork"></div>
         <span class="menu_hamburguer e">&equiv;</span>
         <span class="menu_hamburguer x">&times;</span>
         <header class="mobile w100">

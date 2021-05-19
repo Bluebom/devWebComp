@@ -141,6 +141,10 @@ header.mobile ul li a.marked{
     font-weight: 400;
 }
 
+.headerToWork{
+    display: none;
+}
+
 section.header-desktop{
     display: block;
     width: 100%;
@@ -994,29 +998,57 @@ footer .copyright p span{
     }
     section.header-mobile{
         display: block;
+        z-index: 99999;
+    }
+
+    .headerToWork{
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 3rem;
+        background: rgb(43, 43, 43) none repeat scroll 0% 0%;
+        z-index: 9999;
     }
 
     span.e,
     span.x{
         position: absolute;
         right: 0;
+        top: 0;
         color: white;
         font-size: 2.5rem;
         padding-right: 1rem;
         cursor: pointer;
-        transition: .5s ease-in-out color;
+        animation: flip .5s;
+        user-select: none;
+        z-index: 99999;
     }
 
-    span.x,
-    header.mobile{
+    @keyframes flip {
+        0% {
+            transform: rotate(-180deg);
+            right: -3rem;
+        }
+
+        100% {
+            transform: rotate(0deg);
+            right: 0;
+        }
+    }
+    span.x
+    {
         display: none;
     }
 
     header.mobile{
         width: 100%;
         height: 100vh;
+        position: absolute;
+        top: -100vh;
         background: linear-gradient(to bottom, var(--color3C), var(--color3C));
         padding-bottom: 5rem;
+        transition: top .5s ease-in-out;
+        z-index: 1;
     }
 
     section#Home h1{
