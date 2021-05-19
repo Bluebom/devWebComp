@@ -2,9 +2,10 @@
     <section id="Home" class="all_vh">
         <div class="bg">
             <h1>Olá, eu sou <span>Franklin Henrique</span>.</h1>
-            <h2>Sou um desenvolvedor web full-stack</h2>
+            <h1>Sou um desenvolvedor web full-stack</h1>
             <div class="see_jobs">
-                <a class="call_portfolio" href="<?php echo INCLUDE_PATH ?>#Porth1">Veja o meu trabalho <i class="fas fa-arrow-right"></i></a>
+                <a class="call_portfolio" href="<?php echo INCLUDE_PATH ?>#Porth1">Veja o meu trabalho </a>
+                <i class="fas fa-arrow-right"></i>
             </div>
             <!--see_jobs-->
         </div>

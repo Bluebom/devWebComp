@@ -202,7 +202,6 @@ section#Home .bg{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    word-wrap: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(61,61,61,.55), rgba(61,61,61,.55)), url('../image/eagle.jpg');
     background-repeat: no-repeat;
@@ -211,9 +210,11 @@ section#Home .bg{
 }    
 
 section#Home h1{
-    font-size: 2rem;
+    font-size: 2.25rem;
+    line-height: 40px;
     color: white;
     font-weight: 400;
+    font-family: var(--font03);
 }
 
 section#Home h1 span{
@@ -221,21 +222,23 @@ section#Home h1 span{
     font-family: var(--font03);
     font-weight: 600;
 }
-section#Home h2{
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 400;
-}
-
 
 section#Home .see_jobs{
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 19%;
+    min-width: 17rem;
     margin: 1rem;
-    padding: .4rem .8rem;
-    width: 6,25rem;
-    border: .1rem solid white;
+    padding: 12px 20px 12px 20px;
+    border: .15rem solid #FFF;
     cursor: pointer;
-    transition: 1s;
+    transition: all  .4s;
+    color: white;
+    font-weight: 400;
+    font-size: 16pt;
+    font-family: var(--font03);
+    line-height: 18pt;
 }
 
 section#Home .see_jobs:hover{
@@ -244,14 +247,16 @@ section#Home .see_jobs:hover{
 
 section#Home .see_jobs a{
     color: white;
-    font-weight: 400;
-    font-size: 1.5rem;
 }
 
-section#Home .see_jobs a i{
-    padding: 0 0 0 .5rem;
+section#Home .see_jobs i{
+    transition: all .4s;
 }
 
+section#Home .see_jobs:hover > i{
+    transform: rotate(90deg);
+    
+}
 
 /* About */
 
@@ -811,6 +816,18 @@ footer .copyright p span{
         width: 70%;
     }
 
+    section#Home h1{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    section#Home .see_jobs{
+        min-width: 15rem;
+        font-size: 1.15rem;
+        line-height: 25px;
+        padding: 10px 15px 10px 15px;
+    }
+
     section#About .form_hexx {
         margin-top: -2rem;
         height: 100%;
@@ -960,14 +977,15 @@ footer .copyright p span{
     }
 
     section#Home h1{
-        font-size: 1.4rem;
+    font-size: 1.15rem;
+    line-height: 25px;
     }
-    
-    section#Home h2{
-        font-size: 1.2rem;
-    }
-    section#Home .see_jobs p{
-        font-size: .8rem;
+
+    section#Home .see_jobs{
+        min-width: 13rem;
+        font-size: 1rem;
+        line-height: 20px;
+        padding: 10px 15px 10px 15px;
     }
 
     section#About .form_hexx div.w33 > div{
