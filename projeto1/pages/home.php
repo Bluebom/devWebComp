@@ -125,27 +125,30 @@
         </div><!-- title -->
         <section class="flex_rect">
             <div class="flex_service 1">
-
-                <div class="w25">
-                    <i id="performance" class="fas fa-chart-line"></i>
-                    <p>Procurando melhorar a performance do seu site, SEO, ou a experiência do usuário? </p>
-                    <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
-                </div><!-- w25 -->
-                <div class="w25">
-                    <i class="fas fa-pen-nib"></i>
-                    <p> Projetos modernos, otimizádos e performáticos. Eficazes na hora de converter simples
-                        visitantes em clientes!</p>
-                    <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
-                </div><!-- w25 -->
-                <div class="w25">
-                    <i class="far fa-calendar-check"></i>
-                    <p>Comprometimento em entregar os projetos no prazo correto, sem atrasos e nem aumento de valores.
-                    </p>
-                    <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
-                </div><!-- w25 -->
+            <?php 
+            $first = true;
+            $sql = MySql::conectar()->prepare('SELECT * FROM `tb_site.servicos`');
+            $sql->execute();
+            $servicos = $sql->fetchAll();
+            foreach ($servicos as $key => $value) {
+                if($first){
+                    $first = false; ?>
+                    <div class="w25">
+                        <i id="performance" class="<?php echo $value['icon']?>"></i>
+                        <p><?php echo $value['servico']?></p>
+                        <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
+                    </div><!-- w25 -->
+                <?} else{?>
+                    <div class="w25">
+                        <i class="<?php echo $value['icon']?>"></i>
+                        <p><?php echo $value['servico']?></p>
+                        <a href="<?php echo INCLUDE_PATH ?>#Contact" class="btn">Entre em contato já!</a>
+                    </div><!-- w25 -->
+                <?php 
+                }?>
+            <?php }?>
             </div>
             <!-- form_service1 -->
-
         </section><!-- form_rect -->
     </section><!-- Services -->
     <section id="Portfolio" class="all_vh">
@@ -185,8 +188,8 @@
             <div class="my_contacts">
                 <p>Você também pode entrar em contato comigo através do whatsApp e Telegram <i class="fas fa-arrow-right"></i></p>
                 <div class="wrap">
-                    <a href="https://t.me/Bluebom" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=5583998505251&text=Clique%20em%20continuar%20para%20entrar%20em%20contato%20comigo!" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5583998505251&text=Clique%20em%20continuar%20para%20entrar%20em%20contato%20comigo!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/Bluebom" target="_blank"><i class="fab fa-telegram"></i></a>
                 </div>
             </div>
         </div><!-- flex_contact -->

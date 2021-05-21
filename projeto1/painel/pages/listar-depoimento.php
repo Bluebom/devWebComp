@@ -1,11 +1,12 @@
 <?php
+    checkPermissionPage(2);
     if(isset($_GET['excluir'])){
         $idExcluir = (int)$_GET['excluir'];
         Painel::deleteLine('tb_site.depoimentos', $idExcluir);
         Painel::redirect(INCLUDE_PATH_PAINEL.'listar-depoimento');
     }
     $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-    $porPagina = 2;
+    $porPagina = 4;
     $depoimentos = Painel::selectAll('tb_site.depoimentos', ($paginaAtual-1)*$porPagina, $porPagina);
 ?>
 <div class="box_content">
@@ -24,7 +25,7 @@
             <tr>
                 <td><?php echo $value['nome']?></td>
                 <td><?php echo $value['data']?></td>
-                <td><a action="edite" tipo="depoimento" href="#" class="btn_edit"><i class="fas fa-pen"></i></a></td>
+                <td><a action="edite" tipo="depoimento" href="<?php echo INCLUDE_PATH_PAINEL;?>editar-depoimento?id=<?php echo $value['id'];?>" class="btn_edit"><i class="fas fa-pen"></i></a></td>
                 <td><a action="delete" tipo="depoimento" href="<?php echo INCLUDE_PATH_PAINEL;?>listar-depoimento?excluir=<?php echo $value['id'];?>" class="btn_delete"><i class="fas fa-times"></i></a></td>
             </tr>
             <?php }?>
@@ -32,7 +33,7 @@
     </table>
     <div class="paginacao">
         <?php
-            $totalPaginas = ceil(count(Painel::selectAll('tb_site.depoimentos')) / 2);
+            $totalPaginas = ceil(count(Painel::selectAll('tb_site.depoimentos')) / $porPagina);
             for($i = 1; $i <= $totalPaginas; $i++){
                 if($i == $paginaAtual)
                     echo '<a class="selected" href="'.INCLUDE_PATH_PAINEL.'listar-depoimento?pagina='.$i.'">'.$i.'</a>';

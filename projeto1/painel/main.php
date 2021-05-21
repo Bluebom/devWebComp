@@ -29,6 +29,7 @@ if (isset($_GET['loggout'])) {
                     ;} else{
                 ?>
                 <div class="imagem_user">
+                    <div class="circle"></div>
                     <img src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'];?>">                        
                 </div>
                 <?php ;};?>

@@ -19,7 +19,7 @@ btn_callP.addEventListener('click', (e) => {
 btn_callC.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + portfolio + 80,
+        top: home + about + services + portfolio + 160,
         behavior: "smooth",
     });
 })
@@ -28,7 +28,7 @@ serviceBtn.forEach(value =>{
     value.addEventListener('click', (event) => {
         event.preventDefault();
         window.scroll({
-            top: home + about + services + portfolio + 80,
+            top: home + about + services + portfolio + 160,
             behavior: "smooth",
         })
     })
@@ -63,7 +63,7 @@ mobiul.forEach((value) => {
 
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + 80,
+                    top: home + about + services + 160,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
@@ -110,7 +110,7 @@ deskul.forEach(value => {
                 })
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 80,
+                    top: home + about + services + portfolio + 200,
                     behavior: "smooth",
                 })
             };

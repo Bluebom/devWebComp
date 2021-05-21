@@ -1,6 +1,3 @@
-<?php
-    checkPermissionPage(2);
-?>
 <div class="box_content">
     <h2><i class="fas fa-pen"></i> Adicionar Depoimentos</h2>
     

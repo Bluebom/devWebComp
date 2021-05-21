@@ -16,7 +16,7 @@ const serviceBtn = document.querySelectorAll('.w25 .btn');
 
 // header
 const deskHeader = document.querySelector('.header-desktop')
-const mobiHeader = document.querySelector('.header-mobile');
+const mobiHeader = document.querySelector('.headerToWork');
 const boxMobi = document.querySelector('header.mobile');
 const mobiul = document.querySelectorAll('.mobile ul li a');
 const deskul = document.querySelectorAll('.desktop ul li a');
@@ -25,7 +25,10 @@ const progress = document.querySelectorAll('.skill_lv');
 const loader = document.querySelector('.overlay_loading');
 const success = document.querySelector('span.callback_success');
 const error = document.querySelector('span.callback_error');
-const include_path = 'http://localhost/dashboard/devWebComp/projeto1/';
+const include_path = 'http://192.168.2.119/dashboard/devWebComp/projeto1/';
+// const include_path = 'http://franklinhenrique.com/';
+
+
 
 let mobimarked = mobiul[0];
 let deskmarked = deskul[0];
@@ -49,12 +52,9 @@ function closeBoxMobi(openbtn, closebtn, boxMobi) {
 
 openBtn.addEventListener('click', () => {
     openBoxMobi(openBtn, closeBtn, boxMobi);
-    mobiHeader.style.background = '#2B2B2B';
 })
 
 closeBtn.addEventListener('click', () => {
     closeBoxMobi(openBtn, closeBtn, boxMobi);
-    mobiHeader.style.background = '#2B2B2B';
-    openBtn.style.color = 'white';
 })
 
