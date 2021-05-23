@@ -4,7 +4,14 @@ const body = document.querySelector('body');
 const home = document.querySelector('#Home').offsetHeight - 30;
 const about = document.querySelector('#About').offsetHeight;
 const services = document.querySelector('#Services').offsetHeight;
-const portfolio = document.querySelector('#Portfolio').offsetHeight;
+let portfolio = document.querySelector('#Portfolio').offsetHeight;
+if (screen.width < 640 || screen.height < 480) {
+    portfolio;
+} else if (screen.width < 1024 || screen.height < 768) {
+    portfolio *= 1.2;
+} else {
+    portfolio *= 1.65;
+}
 
 // btns
 const openBtn = document.querySelector('span.e')

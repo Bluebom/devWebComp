@@ -165,7 +165,7 @@
                     $sql->execute();
                     $slides = $sql->fetchAll();
                     foreach ($slides as $key => $value) {?>
-                    <div> <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $value['slide']?>"> </div>
+                    <div> <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $value['slide']?>" alt="<?php echo $value['nome']?>"> </div>
                 <?php }?>
                 </div>
                 <!-- owl-carousel -->
