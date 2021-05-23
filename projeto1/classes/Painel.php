@@ -55,13 +55,15 @@ class Painel
     public static function imagemValida($imagem){
         if($imagem['type'] == 'image/jpeg' || 
            $imagem['type'] == 'image/jpg'  ||
-           $imagem['type'] == 'image/png'){
+           $imagem['type'] == 'image/png')           {
                $tamanho = intval($imagem['size']/1024);
                if($tamanho < 300) {
                    return true;
                } else {
                    return false;
                }
+           } else if($imagem['type'] == 'image/svg+xml'){
+               return true;
            } else {
                return false;
            }

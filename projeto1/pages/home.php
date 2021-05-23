@@ -159,12 +159,14 @@
             </div><!-- title -->
             <div class="container">
                 <div class="owl-carousel">
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/portfolioJCLS.jpg"> </div>
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/instagram.jpg"> </div>
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/netflix.jpg"> </div>
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/responsive.jpg"> </div>
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/slider.jpg"> </div>
-                    <div> <img src="<?php echo INCLUDE_PATH ?>./assets/image/webDesign.jpg"> </div>
+                <?php 
+                    $first = true;
+                    $sql = MySql::conectar()->prepare('SELECT * FROM `tb_site.slides`');
+                    $sql->execute();
+                    $slides = $sql->fetchAll();
+                    foreach ($slides as $key => $value) {?>
+                    <div> <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $value['slide']?>"> </div>
+                <?php }?>
                 </div>
                 <!-- owl-carousel -->
             </div>

@@ -19,7 +19,7 @@ btn_callP.addEventListener('click', (e) => {
 btn_callC.addEventListener('click', (e) => {
     e.preventDefault();
     window.scroll({
-        top: home + about + services + portfolio + 160,
+        top: home + about + services + portfolio*1.8,
         behavior: "smooth",
     });
 })
@@ -28,7 +28,7 @@ serviceBtn.forEach(value =>{
     value.addEventListener('click', (event) => {
         event.preventDefault();
         window.scroll({
-            top: home + about + services + portfolio + 160,
+            top: home + about + services + portfolio*1.8,
             behavior: "smooth",
         })
     })
@@ -110,7 +110,7 @@ deskul.forEach(value => {
                 })
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 200,
+                    top: home + about + services + 1.8*portfolio,
                     behavior: "smooth",
                 })
             };

@@ -592,13 +592,9 @@ section#Portfolio div.portfolio_carousel .title h1::after{
 }
 
 section#Portfolio div.portfolio_carousel div.container{
-    width: 100%;
-    max-width: 55rem;
-    height: 80%;
+    max-width: 82vw;
     padding-right: .1rem;
 }
-
-
 
 /* Contact */
 

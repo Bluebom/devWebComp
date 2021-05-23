@@ -252,38 +252,19 @@ div.box_user div.avatar_user i{
 }
 
 div.box_user div.imagem_user{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 25rem;  
-    border: .25rem solid #2b2b2b;
-    margin: 2% auto;
-    background-color: #3d3d3d;
-    position: relative;
-    filter: drop-shadow(0 0 .2rem #000);
-    margin: 1rem auto;
+    max-width: 8rem;
+    border-radius: 50%;
+    border: .3rem solid #111;
+    overflow: hidden;
+    margin: 5% auto;
+    filter: drop-shadow(0 0 .3rem #000);
 }
 
-div.box_user div.circle{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    border: .3rem solid #3d3d3d;
-    border-radius: 25rem;  
-    filter: drop-shadow(0 0 .15rem #000);
-}
 
 div.box_user div.imagem_user img{
-    width: auto;
-    max-width: 5.4rem;
-    height: 92%;
+    max-width: 100%;
+    display: block;
     object-fit: cover;
-    border-radius: 100%;  
-    position: absolute;
-    top: 4%;
-    left: 0%;
-    filter: drop-shadow(0 0 .1rem #000);
 }
 
 
