@@ -63,14 +63,14 @@ mobiul.forEach((value) => {
 
             } else if (id == '#Portfolio') {
                 window.scroll({
-                    top: home + about + services + 160,
+                    top: home + about + services + 80,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);
 
             } else if (id == '#Contact') {
                 window.scroll({
-                    top: home + about + services + portfolio + 80,
+                    top: home + about + services + portfolio + 40,
                     behavior: "smooth",
                 });
                 closeBoxMobi(openBtn, closeBtn, boxMobi);

@@ -19,19 +19,19 @@ if (isset($_GET['loggout'])) {
         <aside>
             <div class="box_user">
                 <?php
-                    if($_SESSION['img'] == ''){
+                if ($_SESSION['img'] == '') {
                 ?>
-                <div class="avatar_user">
-                    <i class="fas fa-user"></i>
-                </div>
-                <!-- avatar_user -->
+                    <div class="avatar_user">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <!-- avatar_user -->
                 <?php
-                    ;} else{
+                } else {
                 ?>
-                <div class="imagem_user">
-                    <img  width="128" height="128" src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'];?>">                        
-                </div>
-                <?php ;};?>
+                    <div class="imagem_user">
+                        <img width="150" height="150" src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $_SESSION['img']; ?>">
+                    </div>
+                <?php }; ?>
                 <div class="nome_user">
                     <p><?php echo $_SESSION['nome']; ?></p>
                     <span><?php pickCargo($_SESSION['cargo']); ?></span>
@@ -39,20 +39,20 @@ if (isset($_GET['loggout'])) {
                 <!-- nome_user -->
             </div>
             <!-- box_user -->
-            <div class="items_menu"> 
-                    <h2>Cadastro</h2>
-                    <a <?php selecionadoMenu('cadastrar-depoimento');?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimento</a>
-                    <a <?php selecionadoMenu('cadastrar-servico');?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-servico">Cadastrar Serviço</a>
-                    <a <?php selecionadoMenu('cadastrar-slides');?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-slides">Cadastrar Slides</a>                    
-                    <h2 <?php checkPermissionMenu(2);?>>Gestão</h2>
-                    <a <?php selecionadoMenu('listar-depoimento');?><?php checkPermissionMenu(2);?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-depoimento">Listar Depoimentos</a>
-                    <a <?php selecionadoMenu('listar-servico');?><?php checkPermissionMenu(2);?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-servico">Listar Serviços</a>
-                    <a <?php selecionadoMenu('listar-slides');?><?php checkPermissionMenu(2);?>href="<?php echo INCLUDE_PATH_PAINEL?>listar-slides">Listar Slides</a>
-                    <h2>Administração do painel</h2>
-                    <a <?php selecionadoMenu('editUser');?> href="<?php echo INCLUDE_PATH_PAINEL?>editUser">Editar Usuário</a>
-                    <a <?php selecionadoMenu('adicionar-usuario');?> <?php checkPermissionMenu(2);?> href="<?php echo INCLUDE_PATH_PAINEL?>adicionar-usuario">Adicionar Usuário</a>
-                    <h2>Configuração Geral</h2>
-                    <a <?php selecionadoMenu('editar');?> href="<?php echo INCLUDE_PATH_PAINEL?>#">Editar</a>
+            <div class="items_menu">
+                <h2>Cadastro</h2>
+                <a <?php selecionadoMenu('cadastrar-depoimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimento">Cadastrar Depoimento</a>
+                <a <?php selecionadoMenu('cadastrar-servico'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-servico">Cadastrar Serviço</a>
+                <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar Slides</a>
+                <h2 <?php checkPermissionMenu(2); ?>>Gestão</h2>
+                <a <?php selecionadoMenu('listar-depoimento'); ?><?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimento">Listar Depoimentos</a>
+                <a <?php selecionadoMenu('listar-servico'); ?><?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servico">Listar Serviços</a>
+                <a <?php selecionadoMenu('listar-slides'); ?><?php checkPermissionMenu(2); ?>href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar Slides</a>
+                <h2>Administração do painel</h2>
+                <a <?php selecionadoMenu('editUser'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editUser">Editar Usuário</a>
+                <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>adicionar-usuario">Adicionar Usuário</a>
+                <h2>Configuração Geral</h2>
+                <a <?php selecionadoMenu('editar'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>#">Editar</a>
             </div>
         </aside>
         <header>
@@ -64,7 +64,7 @@ if (isset($_GET['loggout'])) {
                 <!-- menu_btn -->
 
                 <div class="home_btn">
-                        <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fas fa-home"></i></a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fas fa-home"></i></a>
                 </div>
 
                 <div class="loggout">
@@ -74,7 +74,7 @@ if (isset($_GET['loggout'])) {
                 <!-- loggout -->
             </div>
             <!-- center -->
-            
+
         </header>
     </section>
     <div class="painel_content">

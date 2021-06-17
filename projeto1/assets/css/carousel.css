@@ -1,86 +1,84 @@
-div.owl-carousel{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    box-shadow: 0rem .3rem 4px rgba(0, 0, 0, .25);
+div.owl-carousel {
+  height: 100%;
+  max-height: 40rem;
+  width: 100%;
+  max-width: 54rem;
+  position: relative;
+  box-shadow: 0rem 0.3rem 4px rgba(0, 0, 0, 0.25);
 }
 
-
-
-div.owl-carousel div.owl-stage div.owl-item{
-    height: 100%;
-
+div.owl-carousel div.owl-stage div.owl-item {
+  height: 100%;
 }
 
-div.owl-carousel div.owl-nav{
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+div.owl-carousel div.owl-nav {
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-div.owl-carousel.owl-loaded.owl-drag div.owl-dots{
-    display: none;
+div.owl-carousel.owl-loaded.owl-drag div.owl-dots {
+  display: none;
 }
 
 div.owl-carousel .owl-nav button.owl-next,
-div.owl-carousel .owl-nav button.owl-prev{
-    visibility: visible;
-    color: rgba(0, 0, 0, 1);
-    padding: 1rem;
-    width: 2rem;
-    height: 20%;
-    background-color: rgba(0, 0, 0, .25);
-    font-size: 3rem;
-    transition: all .4s ease;
+div.owl-carousel .owl-nav button.owl-prev {
+  visibility: visible;
+  color: rgba(0, 0, 0, 1);
+  padding: 1rem;
+  width: 2rem;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 3rem;
+  transition: all 0.4s ease;
 }
 
 div.owl-carousel .owl-nav button.owl-next:hover,
-div.owl-carousel .owl-nav button.owl-prev:hover{
+div.owl-carousel .owl-nav button.owl-prev:hover {
+  color: rgba(200, 200, 200, 1);
+  text-shadow: -0.1rem 0.1rem 5px #2b2b2b;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 7rem;
+  height: 100%;
+  padding: 1rem;
+  width: 4rem;
+}
+
+@media (max-width: 768px) {
+  div.owl-carousel .owl-nav button.owl-next,
+  div.owl-carousel .owl-nav button.owl-prev {
     color: rgba(200, 200, 200, 1);
-    text-shadow: -.1rem .1rem 5px #2b2b2b;
-    background-color: rgba(0, 0, 0, .6);
-    font-size: 7rem;
-    height: 100%;
-    padding: 1rem;
-    width: 4rem;
+    text-shadow: -0.1rem 0.1rem 5px #2b2b2b;
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50%;
+    width: 3rem;
+  }
+  div.owl-carousel .owl-nav button.owl-next:hover,
+  div.owl-carousel .owl-nav button.owl-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 5rem;
+    height: 50%;
+    padding: 0rem;
+    width: 3rem;
+  }
 }
 
-@media (max-width: 768px){
-    div.owl-carousel .owl-nav button.owl-next,
-    div.owl-carousel .owl-nav button.owl-prev{
-        color: rgba(200, 200, 200, 1);
-        text-shadow: -.1rem .1rem 5px #2b2b2b;
-        font-size: 5rem;
-        background-color: rgba(0, 0, 0, .5);
-        height: 50%;
-        width: 3rem;
-    }
-    div.owl-carousel .owl-nav button.owl-next:hover,
-    div.owl-carousel .owl-nav button.owl-prev:hover{
-        background-color: rgba(0, 0, 0, .7);
-        font-size: 5rem;
-        height: 50%;
-        padding: 0rem;
-        width: 3rem;
-}
-
-}
-
-@media (max-width: 550px){
-    div.owl-carousel .owl-nav button.owl-next,
-    div.owl-carousel .owl-nav button.owl-prev{
-        font-size: 4rem;
-        width: 2rem;
-    }
-    div.owl-carousel .owl-nav button.owl-next:hover,
-    div.owl-carousel .owl-nav button.owl-prev:hover{
-        font-size: 4rem;
-        width: 2rem;
-    }
+@media (max-width: 550px) {
+  div.owl-carousel .owl-nav button.owl-next,
+  div.owl-carousel .owl-nav button.owl-prev {
+    font-size: 4rem;
+    width: 2rem;
+  }
+  div.owl-carousel .owl-nav button.owl-next:hover,
+  div.owl-carousel .owl-nav button.owl-prev:hover {
+    font-size: 4rem;
+    width: 2rem;
+  }
 }

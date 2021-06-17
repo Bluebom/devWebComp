@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio web para captação de clientes">
-    <meta name="keywords" content="web-developer, web, developer, design-sites, sites, institucionais, sites-institucionais, landpage,land-page">
+    <meta name="keywords" content="sistemas web ,web developer, web, developer, design sites, sites, institucionais, sites institucionais, landpage,land page">
     <meta name="author" content="Franklin Henrique">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo INCLUDE_PATH ?>./assets/image/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo INCLUDE_PATH ?>./assets/image/favicon-32x32.png">
@@ -35,11 +35,11 @@
         <header class="mobile w100">
             <nav>
                 <ul>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
+                    <li><a title="Home" href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
+                    <li><a title="Sobre" href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
+                    <li><a title="Serviços" href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
+                    <li><a title="Portfólio" href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
+                    <li><a title="Contato" href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,11 +49,11 @@
         <header class="desktop w100">
             <nav>
                 <ul>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
+                    <li><a title="Home" href="<?php echo INCLUDE_PATH ?>#Home" class="marked">Home</a></li>
+                    <li><a title="Sobre" href="<?php echo INCLUDE_PATH ?>#About">Sobre</a></li>
+                    <li><a title="Serviços" href="<?php echo INCLUDE_PATH ?>#Services">Serviços</a></li>
+                    <li><a title="Portfólio" href="<?php echo INCLUDE_PATH ?>#Portfolio">Portfólio</a></li>
+                    <li><a title="Contato" href="<?php echo INCLUDE_PATH ?>#Contact">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -77,6 +77,18 @@
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/menuChangeOnScroll.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./assets/js/smoothScrollOnClick.js"></script>
     <script src="<?php echo INCLUDE_PATH ?>./ajax/formularios.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SDEY1T33T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9SDEY1T33T');
+    </script>
 </body>
 
 </html>
