@@ -7,20 +7,20 @@ $autoload = function ($class) {
 
 spl_autoload_register($autoload);
 
-// define('INCLUDE_PATH', 'http://192.168.2.119/dashboard/devWebComp/projeto1/');
-define('INCLUDE_PATH', 'https://franklinhenrique.com/');
+define('INCLUDE_PATH', 'http://192.168.2.119/dashboard/devWebComp/projeto1/');
+// define('INCLUDE_PATH', 'https://franklinhenrique.com/');
 define('INCLUDE_PATH_PAINEL', INCLUDE_PATH . "painel/");
 define('BASE__DIR__PAINEL', __DIR__ . '/painel');
 
 // Conectar com DB
-define('HOST', '192.185.176.109');
-define('USER', 'frankl04_proj');
-define('PASSWORD', '8aca7EAE!!');
-define('DATABASE', 'frankl04_Projeto1');
-// define('HOST', 'localhost');
-// define('USER', 'root');
-// define('PASSWORD', '');
-// define('DATABASE', 'projeto_01');
+// define('HOST', '192.185.176.109');
+// define('USER', 'frankl04_proj');
+// define('PASSWORD', '8aca7EAE!!');
+// define('DATABASE', 'frankl04_Projeto1');
+define('HOST', 'localhost');
+define('USER', 'root');
+define('PASSWORD', '');
+define('DATABASE', 'projeto_01');
 
 // Consts para painel de controle
 define('NOME_EMPRESA', 'Franklin Henrique');
