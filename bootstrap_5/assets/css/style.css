@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+/* gerais */
+body {
+  background-color: #ccc;
+}
+
+/* nav bar */
+.bg-blue-default {
+  background-color: #3498db;
+}
+
+/* list group */
+
+.list-group-item.bg-blue-default:hover {
+  color: white;
+  background-color: #3498dbee;
+}
+
+/* panel */
+div.card {
+  border: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #header .row {
+    justify-content: center;
+    text-align: center;
+  }
+  #header div.col-4 {
+    min-width: 180px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #header .row div {
+    width: 100%;
+  }
+}
