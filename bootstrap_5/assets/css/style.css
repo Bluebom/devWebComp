@@ -11,15 +11,40 @@ body {
 }
 
 /* list group */
+.list-group-item.list-group-item-action.bg-blue-default {
+  background-color: #3498db;
+}
 
 .list-group-item.bg-blue-default:hover {
   color: white;
   background-color: #3498dbee;
 }
 
+.list-group-item.bg-blue-default {
+  color: white;
+}
+
 /* panel */
 div.card {
   border: none;
+}
+
+div#header.bg-dark .container div.black-belt {
+  height: 4rem;
+  padding-top: 0.5rem;
+}
+
+section.container nav.nav-horizontal-bar {
+  padding-top: 0;
+  height: 2rem;
+}
+
+main.container div.list-group {
+  min-width: 7.5rem;
+}
+
+main.container div.row div.col-9.main {
+  min-width: 15rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -33,8 +58,23 @@ div.card {
   }
 }
 
+@media (max-width: 600px) {
+  main.container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
 @media screen and (max-width: 475px) {
   #header .row div {
     width: 100%;
+  }
+
+  main.container div.row div.col-9.main {
+    margin: 0 auto;
+  }
+
+  main.container div.col-3 {
+    display: none;
   }
 }

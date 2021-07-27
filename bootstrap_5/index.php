@@ -22,10 +22,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
+          <div class="navbar-nav ms-auto" id="navbar">
+            <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+            <a class="nav-link" href="#">Cadastrar Equipe</a>
+            <a class="nav-link" href="#">Membros Equipe</a>
           </div>
           <div class="navbar-nav ms-auto">
             <a class="nav-link" href="?sair">Sair</a>
@@ -35,9 +35,9 @@
     </nav>
     <div id="header" class="bg-dark">
       <div class="container text-light">
-        <div class="row align-items-center py-2">
+        <div class="black-belt row align-items-center">
           <div class="col-8">
-            <h1><i class="bi bi-gear-fill"></i> Painel de controle</h1>
+            <h1><i class="bi bi-gear-fill pt-1"></i> Painel de controle</h1>
           </div>
           <div class="col-4 mt-3">
             <p><i class="bi bi-stopwatch"></i> Seu último login foi em 12/06/2019</p>
@@ -46,8 +46,8 @@
       </div>
     </div>
   </header>
-  <section class="bread container bg-light py-1 mb-3">
-    <nav aria-label="breadcrumb">
+  <section class="bread container mb-2 col-12">
+    <nav aria-label="breadcrumb" class="bg-light nav-horizontal-bar p-1">
       <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">Home</li>
       </ol>
@@ -56,23 +56,20 @@
   <main class="container">
     <div class="row">
       <div class="col-3">
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action bg-blue-default" aria-current="true">
-            <i class="bi bi-house-door-fill"></i>
-            Home
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">Sobre</a>
-          <a href="#" class="list-group-item list-group-item-action">Equipe</a>
+        <div class="list-group" id="list">
+          <a href="#" class="list-group-item list-group-item-action bg-blue-default" aria-current="true"><i class="bi bi-card-list"></i> Sobre</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-pen"></i> Cadastrar Equipe</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-pen"></i> Membros Equipe</a>
         </div>
       </div>
-      <div class="col-9">
+      <div class="col-9 main">
         <div class="card mb-3">
-          <h3 class="card-header bg-blue-default">Sobre</h3>
+          <h3 class="card-header bg-blue-default text-white">Sobre</h3>
           <div class="card-body">
             <form>
               <div class="mb-3">
                 <label for="textArea" class="form-label">Código HTML:</label>
-                <textarea id="textArea" class="form-control"></textarea>
+                <textarea style="height: 140px; resize: vertical;" id="textArea" class="form-control"></textarea>
                 <div id="emailHelp" class="form-text">Digite seu código HTML aqui!</div>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -80,7 +77,7 @@
           </div>
         </div>
         <div class="card mb-3">
-          <h3 class="card-header bg-blue-default">Cadastrar Equipe</h3>
+          <h3 class="card-header bg-blue-default text-white">Cadastrar Equipe</h3>
           <div class="card-body">
             <form>
               <div class="mb-3">
@@ -89,11 +86,42 @@
               </div>
               <div class="mb-3">
                 <label for="textArea" class="form-label">Descrição do membro:</label>
-                <textarea id="textArea" class="form-control"></textarea>
+                <textarea style="height: 140px; resize: vertical;" id="textArea" class="form-control"></textarea>
                 <div id="emailHelp" class="form-text">Breve descrição aqui!</div>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <h3 class="card-header bg-blue-default text-white">Membros Equipe</h3>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nome do membro</th>
+                  <th scope="col"> ## </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope='row'>1</th>
+                  <td>Franklin Henrique</td>
+                  <td><button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> excluir</button></td>
+                </tr>
+                <tr>
+                  <th scope='row'>2</th>
+                  <td>Pedro Henrique</td>
+                  <td><button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> excluir</button></td>
+                </tr>
+                <tr>
+                  <th scope='row'>3</th>
+                  <td>Guilherme Lucena</td>
+                  <td><button type="button" class="btn btn-danger"><i class="bi bi-trash"></i> excluir</button></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -104,6 +132,7 @@
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
