@@ -30,29 +30,37 @@ if (isset($_COOKIE['lembrar'])) {
 <body>
     <div class="box_login">
         <?php
-        if (isset($_POST['acao'])) {
-            $user = $_POST['user'];
-            $password = $_POST['password'];
-            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.users` WHERE user = ? AND password = ?");
-            $sql->execute(array($user, $password));
+        $btnAcao = filter_input(INPUT_POST, 'acao', FILTER_SANITIZE_STRING);
+        if (isset($btnAcao)) {
+            $data = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $user = $data['user'];
+            $password = $data['password'];
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.users` WHERE user = ?");
+            $sql->execute(array($user));
             if ($sql->rowCount() == 1) {
-                // logado
                 $info = $sql->fetch();
-                $_SESSION['login'] = true;
-                $_SESSION['user'] = $user;
-                $_SESSION['password'] = $password;
-                $_SESSION['img'] = $info['img'];
-                $_SESSION['cargo'] = $info['cargo'];
-                $_SESSION['nome'] = $info['nome'];
-                if (isset($_POST['lembrar'])) {
-                    setcookie('lembrar', true, time() + (60 * 60 * 2), '/');
-                    setcookie('user', $user, time() + (60 * 60 * 2), '/');
-                    setcookie('password', $password, time() + (60 * 60 * 2), '/');
+                if (password_verify($password, $info['password'])) {
+
+                    // logado
+                    $_SESSION['login'] = true;
+                    $_SESSION['user'] = $user;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['img'] = $info['img'];
+                    $_SESSION['cargo'] = $info['cargo'];
+                    $_SESSION['nome'] = $info['nome'];
+                    if (isset($_POST['lembrar'])) {
+                        setcookie('lembrar', true, time() + (60 * 60 * 2), '/');
+                        setcookie('user', $user, time() + (60 * 60 * 2), '/');
+                        setcookie('password', $password, time() + (60 * 60 * 2), '/');
+                    }
+                    Painel::redirect(INCLUDE_PATH_PAINEL);
+                } else {
+                    // falhou
+                    echo '<div class="erro_box">&times; Senha incorreta!</div>';
                 }
-                Painel::redirect(INCLUDE_PATH_PAINEL);
             } else {
                 // falhou
-                echo '<div class="erro_box">&times; Senha ou usuário incorreto!</div>';
+                echo '<div class="erro_box">&times; Usuário incorreto!</div>';
             }
         }
 
