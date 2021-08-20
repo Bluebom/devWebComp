@@ -45,8 +45,7 @@ class Painel
     public static function limparUsuariosOnline()
     {
         $date = date('Y-m-d H:i:s');
-        $sql = MySql::conectar()->prepare("DELETE FROM `tb_admin.online` WHERE ultima_acao < '$date' - INTERVAL 3 MINUTE");
-        $sql->execute();
+        $sql = MySql::conectar()->exec("DELETE FROM `tb_admin.online` WHERE ultima_acao < '$date' - INTERVAL 3 MINUTE");
     }
 
     public static function alert($tipo, $mensagem)

@@ -50,70 +50,20 @@
             <!--w50-->
             <div class="w50 skills">
                 <h2>Tecnologias</h2>
+                <?php
+                    $sql = MySql::conectar()->prepare('SELECT * FROM `tb_admin.skills`');
+                    $sql->execute();
+                    $skills = $sql->fetchAll();
+                    foreach($skills as $value):
+                ?>
                 <div class="skillBox">
-                    <span>HTML5</span>
+                    <span><?=$value['nome']?></span>
                     <div class="skill">
-                        <div class="skill_lv w90" completed="90"></div>
+                        <div class="skill_lv w90" completed="<?= $value['nivel']?>"></div>
                     </div>
                     <!-- skill -->
                 </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>CSS3</span>
-                    <div class="skill">
-                        <div class="skill_lv w90" completed="90"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>JavaScript</span>
-                    <div class="skill">
-                        <div class="skill_lv w75" completed="75"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>JQuery</span>
-                    <div class="skill">
-                        <div class="skill_lv w50" completed="55"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>PHP</span>
-                    <div class="skill">
-                        <div class="skill_lv w75" completed="65"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>MySQL</span>
-                    <div class="skill">
-                        <div class="skill_lv w75" completed="65"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>GIT</span>
-                    <div class="skill">
-                        <div class="skill_lv w75" completed="75"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
-                <div class="skillBox">
-                    <span>Linux</span>
-                    <div class="skill">
-                        <div class="skill_lv w90" completed="75"></div>
-                    </div>
-                    <!-- skill -->
-                </div>
-                <!-- skillBox -->
+                <?php endforeach?>
             </div>
             <!--w50-->
         </section><!-- who_i_am -->

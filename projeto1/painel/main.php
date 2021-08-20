@@ -41,10 +41,12 @@ if (isset($_GET['loggout'])) {
             <!-- box_user -->
             <div class="items_menu">
                 <h2>Cadastro</h2>
+                <a <?php selecionadoMenu('cadastrar-skill'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-skill">Cadastrar Habilidade</a>
                 <a <?php selecionadoMenu('cadastrar-depoimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimento">Cadastrar Depoimento</a>
                 <a <?php selecionadoMenu('cadastrar-servico'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-servico">Cadastrar Serviço</a>
                 <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar Slides</a>
                 <h2 <?php checkPermissionMenu(2); ?>>Gestão</h2>
+                <a <?php selecionadoMenu('listar-skill'); ?><?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-skill">Listar Habilidades</a>
                 <a <?php selecionadoMenu('listar-depoimento'); ?><?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimento">Listar Depoimentos</a>
                 <a <?php selecionadoMenu('listar-servico'); ?><?php checkPermissionMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servico">Listar Serviços</a>
                 <a <?php selecionadoMenu('listar-slides'); ?><?php checkPermissionMenu(2); ?>href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar Slides</a>

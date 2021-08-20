@@ -4,3 +4,9 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 
 Options -Indexes
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^franklinhenrique\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.franklinhenrique\.com$
+RewriteRule ^(.*)$ "https\:\/\/franklinhenrique\.com\/$1" [R=301,L]
+
